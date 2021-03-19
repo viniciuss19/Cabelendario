@@ -1,0 +1,10 @@
+C:\Users\Usuario\DS\tarefa vinao\tarefa vinao\bin\Debug\tarefa vinao.exe.config
+C:\Users\Usuario\DS\tarefa vinao\tarefa vinao\bin\Debug\tarefa vinao.exe
+C:\Users\Usuario\DS\tarefa vinao\tarefa vinao\bin\Debug\tarefa vinao.pdb
+C:\Users\Usuario\DS\tarefa vinao\tarefa vinao\obj\Debug\tarefa vinao.csprojAssemblyReference.cache
+C:\Users\Usuario\DS\tarefa vinao\tarefa vinao\obj\Debug\tarefa_vinao.exercíço.resources
+C:\Users\Usuario\DS\tarefa vinao\tarefa vinao\obj\Debug\tarefa_vinao.Properties.Resources.resources
+C:\Users\Usuario\DS\tarefa vinao\tarefa vinao\obj\Debug\tarefa vinao.csproj.GenerateResource.cache
+C:\Users\Usuario\DS\tarefa vinao\tarefa vinao\obj\Debug\tarefa vinao.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\DS\tarefa vinao\tarefa vinao\obj\Debug\tarefa vinao.exe
+C:\Users\Usuario\DS\tarefa vinao\tarefa vinao\obj\Debug\tarefa vinao.pdb
