@@ -8,22 +8,22 @@ namespace CABELENDÁRIO
 {
     class Cliente
     {
-        private string _user;
-        public string usuario
+        private string _nome;
+        public string Nome
         {
-            get => _user;
-            set => _user = value;
+            get => _nome;
+            set => _nome = value;
         }
         private string _senha;
-        public string senha
+        public string Senha
         {
             get => _senha;
             set => _senha = value;
         }
-        public Cliente(string Usuario, string Nome)
+        public Cliente(string nome, string senha)
         {
-            usuario = Usuario;
-            senha = Nome;
+            Nome = nome;
+            Senha = senha;
         }
     }
 }

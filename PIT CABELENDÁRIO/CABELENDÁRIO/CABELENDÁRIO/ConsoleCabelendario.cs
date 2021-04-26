@@ -8,5 +8,9 @@ namespace CABELENDÁRIO
 {
     class ConsoleCabelendario
     {
+        public static void CadastrarCliente()
+        {
+            
+        }
     }
 }

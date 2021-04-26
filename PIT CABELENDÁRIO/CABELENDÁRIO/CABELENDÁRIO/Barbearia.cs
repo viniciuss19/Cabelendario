@@ -8,5 +8,6 @@ namespace CABELENDÁRIO
 {
     class Barbearia
     {
+        public static List<Cliente> Clientes = new List<Cliente>();
     }
 }

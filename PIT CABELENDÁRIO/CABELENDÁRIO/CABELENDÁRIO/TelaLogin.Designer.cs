@@ -156,6 +156,7 @@ namespace CABELENDÁRIO
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(207, 20);
             this.txtUsername.TabIndex = 11;
+            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // txtPassword
             // 
@@ -195,7 +196,7 @@ namespace CABELENDÁRIO
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Form1
+            // TelaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -216,7 +217,7 @@ namespace CABELENDÁRIO
             this.Controls.Add(this.panel4);
             this.ForeColor = System.Drawing.Color.SpringGreen;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "TelaLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Form1_Load);

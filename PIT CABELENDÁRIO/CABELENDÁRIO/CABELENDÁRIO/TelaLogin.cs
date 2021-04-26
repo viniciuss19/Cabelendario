@@ -61,7 +61,7 @@ namespace CABELENDÁRIO
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text == "" && txtPassword.Text == "123") 
+            if(txtUsername.Text == "Vinicius" && txtPassword.Text == "123")
             {
                new Menu().Show();
                 this.Hide();
@@ -85,6 +85,11 @@ namespace CABELENDÁRIO
         {
             new Cadastro().Show();
             this.Hide();
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
