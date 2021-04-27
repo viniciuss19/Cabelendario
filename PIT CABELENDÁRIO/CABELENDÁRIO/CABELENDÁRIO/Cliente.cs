@@ -20,10 +20,12 @@ namespace CABELENDÁRIO
             get => _senha;
             set => _senha = value;
         }
-        public Cliente(string nome, string senha)
+        private string _cpf;
+        public string cpf
         {
-            Nome = nome;
-            Senha = senha;
+            get => _cpf;
+            set => _cpf = value;
         }
+        
     }
 }

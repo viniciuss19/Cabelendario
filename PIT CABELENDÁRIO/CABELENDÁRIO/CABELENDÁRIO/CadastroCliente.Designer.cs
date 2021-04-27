@@ -36,10 +36,10 @@ namespace CABELENDÁRIO
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txtNomeCliente = new System.Windows.Forms.TextBox();
+            this.txtSenhaCliente = new System.Windows.Forms.TextBox();
+            this.txtCpfCliente = new System.Windows.Forms.TextBox();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -117,41 +117,42 @@ namespace CABELENDÁRIO
             this.panel3.Size = new System.Drawing.Size(200, 2);
             this.panel3.TabIndex = 10;
             // 
-            // textBox1
+            // txtNomeCliente
             // 
-            this.textBox1.Location = new System.Drawing.Point(92, 255);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(197, 20);
-            this.textBox1.TabIndex = 12;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtNomeCliente.Location = new System.Drawing.Point(92, 255);
+            this.txtNomeCliente.Name = "txtNomeCliente";
+            this.txtNomeCliente.Size = new System.Drawing.Size(197, 20);
+            this.txtNomeCliente.TabIndex = 12;
+            this.txtNomeCliente.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // txtSenhaCliente
             // 
-            this.textBox2.Location = new System.Drawing.Point(92, 314);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(197, 20);
-            this.textBox2.TabIndex = 13;
+            this.txtSenhaCliente.Location = new System.Drawing.Point(92, 314);
+            this.txtSenhaCliente.Name = "txtSenhaCliente";
+            this.txtSenhaCliente.Size = new System.Drawing.Size(197, 20);
+            this.txtSenhaCliente.TabIndex = 13;
+            this.txtSenhaCliente.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox3
+            // txtCpfCliente
             // 
-            this.textBox3.Location = new System.Drawing.Point(92, 379);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(197, 20);
-            this.textBox3.TabIndex = 14;
+            this.txtCpfCliente.Location = new System.Drawing.Point(92, 379);
+            this.txtCpfCliente.Name = "txtCpfCliente";
+            this.txtCpfCliente.Size = new System.Drawing.Size(197, 20);
+            this.txtCpfCliente.TabIndex = 14;
             // 
-            // button2
+            // btnCadastrar
             // 
-            this.button2.BackColor = System.Drawing.Color.SpringGreen;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(329, 291);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(226, 88);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "CADASTRAR";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnCadastrar.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrar.Location = new System.Drawing.Point(329, 291);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(226, 88);
+            this.btnCadastrar.TabIndex = 15;
+            this.btnCadastrar.Text = "CADASTRAR";
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.button2_Click);
             // 
             // label6
             // 
@@ -214,10 +215,10 @@ namespace CABELENDÁRIO
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(580, 450);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnCadastrar);
+            this.Controls.Add(this.txtCpfCliente);
+            this.Controls.Add(this.txtSenhaCliente);
+            this.Controls.Add(this.txtNomeCliente);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label4);
@@ -256,10 +257,10 @@ namespace CABELENDÁRIO
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtNomeCliente;
+        private System.Windows.Forms.TextBox txtSenhaCliente;
+        private System.Windows.Forms.TextBox txtCpfCliente;
+        private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label label6;
     }
 }

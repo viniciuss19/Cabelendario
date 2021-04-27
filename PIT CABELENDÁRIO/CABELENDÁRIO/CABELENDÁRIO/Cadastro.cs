@@ -40,7 +40,7 @@ namespace CABELENDÁRIO
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new CadastroCliente().Show();
+             new CadastroCliente().Show();
             this.Hide();
         }
 

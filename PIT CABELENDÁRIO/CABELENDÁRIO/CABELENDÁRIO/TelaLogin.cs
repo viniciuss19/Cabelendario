@@ -16,8 +16,8 @@ namespace CABELENDÁRIO
     {
         public TelaLogin()
         {
-            
 
+           
             InitializeComponent();
             
         }
@@ -61,7 +61,9 @@ namespace CABELENDÁRIO
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(txtUsername.Text == "Vinicius" && txtPassword.Text == "123")
+            
+            
+            if(txtUsername.Text == "a" && txtPassword.Text == "1")
             {
                new Menu().Show();
                 this.Hide();
