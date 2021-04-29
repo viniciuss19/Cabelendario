@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "CabelendarioMenu123/1.0.0": {
+        "runtime": {
+          "CabelendarioMenu123.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CabelendarioMenu123/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

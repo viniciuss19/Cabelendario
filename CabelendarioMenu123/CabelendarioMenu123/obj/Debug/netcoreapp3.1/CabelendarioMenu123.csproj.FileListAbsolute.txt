@@ -1,0 +1,16 @@
+C:\Users\Admin\source\repos\CabelendarioMenu123\CabelendarioMenu123\bin\Debug\netcoreapp3.1\CabelendarioMenu123.exe
+C:\Users\Admin\source\repos\CabelendarioMenu123\CabelendarioMenu123\bin\Debug\netcoreapp3.1\CabelendarioMenu123.deps.json
+C:\Users\Admin\source\repos\CabelendarioMenu123\CabelendarioMenu123\bin\Debug\netcoreapp3.1\CabelendarioMenu123.runtimeconfig.json
+C:\Users\Admin\source\repos\CabelendarioMenu123\CabelendarioMenu123\bin\Debug\netcoreapp3.1\CabelendarioMenu123.runtimeconfig.dev.json
+C:\Users\Admin\source\repos\CabelendarioMenu123\CabelendarioMenu123\bin\Debug\netcoreapp3.1\CabelendarioMenu123.dll
+C:\Users\Admin\source\repos\CabelendarioMenu123\CabelendarioMenu123\bin\Debug\netcoreapp3.1\CabelendarioMenu123.pdb
+C:\Users\Admin\source\repos\CabelendarioMenu123\CabelendarioMenu123\obj\Debug\netcoreapp3.1\CabelendarioMenu123.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\CabelendarioMenu123\CabelendarioMenu123\obj\Debug\netcoreapp3.1\CabelendarioMenu123.Form1.resources
+C:\Users\Admin\source\repos\CabelendarioMenu123\CabelendarioMenu123\obj\Debug\netcoreapp3.1\CabelendarioMenu123.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\CabelendarioMenu123\CabelendarioMenu123\obj\Debug\netcoreapp3.1\CabelendarioMenu123.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\CabelendarioMenu123\CabelendarioMenu123\obj\Debug\netcoreapp3.1\CabelendarioMenu123.AssemblyInfo.cs
+C:\Users\Admin\source\repos\CabelendarioMenu123\CabelendarioMenu123\obj\Debug\netcoreapp3.1\CabelendarioMenu123.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\CabelendarioMenu123\CabelendarioMenu123\obj\Debug\netcoreapp3.1\CabelendarioMenu123.dll
+C:\Users\Admin\source\repos\CabelendarioMenu123\CabelendarioMenu123\obj\Debug\netcoreapp3.1\CabelendarioMenu123.pdb
+C:\Users\Admin\source\repos\CabelendarioMenu123\CabelendarioMenu123\obj\Debug\netcoreapp3.1\CabelendarioMenu123.genruntimeconfig.cache
+C:\Users\Admin\source\repos\CabelendarioMenu123\CabelendarioMenu123\obj\Debug\netcoreapp3.1\CabelendarioMenu123.Properties.Resources.resources
