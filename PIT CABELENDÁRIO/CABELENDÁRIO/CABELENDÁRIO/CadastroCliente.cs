@@ -12,15 +12,14 @@ namespace CABELENDÁRIO
 {
     public partial class CadastroCliente : Form
     {
-       List<Cliente> clientes;
+
+       static List<Cliente> clientes = new List<Cliente>();
 
         public CadastroCliente()
         {
             InitializeComponent();
-
-            clientes = new List<Cliente>();
         }
-        
+
         private void CadastroCliente_Load(object sender, EventArgs e)
         {
 
@@ -28,7 +27,7 @@ namespace CABELENDÁRIO
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -67,32 +66,38 @@ namespace CABELENDÁRIO
 
 
             }
-           
 
-              
 
-                if (txtNomeCliente.Text == "")
-                {
-                    MessageBox.Show("Preencha o nome");
-                    txtNomeCliente.Focus();
-                }
 
-                else if (txtSenhaCliente.Text == "")
-                {
-                    MessageBox.Show("Preencha a senha");
-                    txtSenhaCliente.Focus();
-                }
 
-                else if (txtCpfCliente.Text == "")
-                {
-                    MessageBox.Show("Preencha o cpf");
-                    txtCpfCliente.Focus();
-                    return;
-                }
+            if (txtNomeCliente.Text == "")
+            {
+                MessageBox.Show("Preencha o nome");
+                txtNomeCliente.Focus();
+            }
+
+            else if (txtSenhaCliente.Text == "")
+            {
+                MessageBox.Show("Preencha a senha");
+                txtSenhaCliente.Focus();
+            }
+
+            else if (txtCpfCliente.Text == "")
+            {
+                MessageBox.Show("Preencha o cpf");
+                txtCpfCliente.Focus();
+                return;
+            }
+            else
+            {
+                new TelaLogin().Show();
+                this.Hide();
+            }
+
 
             
-        }
 
+        }
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
@@ -102,5 +107,13 @@ namespace CABELENDÁRIO
         {
 
         }
+       
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
+

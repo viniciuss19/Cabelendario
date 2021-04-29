@@ -8,6 +8,35 @@ namespace CABELENDÁRIO
 {
     class Barbearia
     {
-        public static List<Cliente> Clientes = new List<Cliente>();
+        private string _nomebarbearia;
+        public string nomebarbearia
+        {
+            get => _nomebarbearia;
+            set => _nomebarbearia = value;
+        }
+        private string _endereçobarbearia;
+        public string endereçobarbearia
+        {
+            get => _endereçobarbearia;
+            set => _endereçobarbearia = value;
+        }
+        private string _nomedono;
+        public string nomedono
+        {
+            get => _nomedono;
+            set => _nomedono = value;
+        }
+        private string _cpfdono;
+        public string cpfdono
+        {
+            get => _nomedono;
+            set => _nomedono = value;
+
+        }
+
+            
+
+        
+
     }
 }

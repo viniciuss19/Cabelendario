@@ -30,10 +30,10 @@ namespace CABELENDÁRIO
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNomeBarbearia = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtEndereçoBarbearia = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -42,11 +42,11 @@ namespace CABELENDÁRIO
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNomeDonoBarbearia = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtCpfDonoBarbearia = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -67,12 +67,13 @@ namespace CABELENDÁRIO
             this.label1.Text = "BARBEARIA";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // txtNomeBarbearia
             // 
-            this.textBox1.Location = new System.Drawing.Point(121, 249);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(197, 20);
-            this.textBox1.TabIndex = 13;
+            this.txtNomeBarbearia.Location = new System.Drawing.Point(121, 249);
+            this.txtNomeBarbearia.Name = "txtNomeBarbearia";
+            this.txtNomeBarbearia.Size = new System.Drawing.Size(197, 20);
+            this.txtNomeBarbearia.TabIndex = 13;
+            this.txtNomeBarbearia.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // panel1
             // 
@@ -86,18 +87,18 @@ namespace CABELENDÁRIO
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.SpringGreen;
-            this.label2.Location = new System.Drawing.Point(99, 215);
+            this.label2.Location = new System.Drawing.Point(99, 223);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(242, 23);
             this.label2.TabIndex = 15;
             this.label2.Text = "Digite o nome da sua barbearia:";
             // 
-            // textBox2
+            // txtEndereçoBarbearia
             // 
-            this.textBox2.Location = new System.Drawing.Point(121, 302);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(197, 20);
-            this.textBox2.TabIndex = 16;
+            this.txtEndereçoBarbearia.Location = new System.Drawing.Point(121, 302);
+            this.txtEndereçoBarbearia.Name = "txtEndereçoBarbearia";
+            this.txtEndereçoBarbearia.Size = new System.Drawing.Size(197, 20);
+            this.txtEndereçoBarbearia.TabIndex = 16;
             // 
             // panel2
             // 
@@ -159,6 +160,7 @@ namespace CABELENDÁRIO
             this.button2.TabIndex = 20;
             this.button2.Text = "CADASTRAR";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox4
             // 
@@ -177,16 +179,16 @@ namespace CABELENDÁRIO
             this.label4.ForeColor = System.Drawing.Color.SpringGreen;
             this.label4.Location = new System.Drawing.Point(117, 325);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(144, 23);
+            this.label4.Size = new System.Drawing.Size(176, 23);
             this.label4.TabIndex = 22;
-            this.label4.Text = "Digite o seu nome:";
+            this.label4.Text = "Digite o nome do dono:";
             // 
-            // textBox3
+            // txtNomeDonoBarbearia
             // 
-            this.textBox3.Location = new System.Drawing.Point(121, 350);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(197, 20);
-            this.textBox3.TabIndex = 23;
+            this.txtNomeDonoBarbearia.Location = new System.Drawing.Point(121, 350);
+            this.txtNomeDonoBarbearia.Name = "txtNomeDonoBarbearia";
+            this.txtNomeDonoBarbearia.Size = new System.Drawing.Size(197, 20);
+            this.txtNomeDonoBarbearia.TabIndex = 23;
             // 
             // panel3
             // 
@@ -212,16 +214,16 @@ namespace CABELENDÁRIO
             this.label5.ForeColor = System.Drawing.Color.SpringGreen;
             this.label5.Location = new System.Drawing.Point(117, 373);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 23);
+            this.label5.Size = new System.Drawing.Size(157, 23);
             this.label5.TabIndex = 26;
-            this.label5.Text = "Digite seu cpf:";
+            this.label5.Text = "Digite o cpf do dono:";
             // 
-            // textBox4
+            // txtCpfDonoBarbearia
             // 
-            this.textBox4.Location = new System.Drawing.Point(121, 399);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(197, 20);
-            this.textBox4.TabIndex = 27;
+            this.txtCpfDonoBarbearia.Location = new System.Drawing.Point(121, 399);
+            this.txtCpfDonoBarbearia.Name = "txtCpfDonoBarbearia";
+            this.txtCpfDonoBarbearia.Size = new System.Drawing.Size(197, 20);
+            this.txtCpfDonoBarbearia.TabIndex = 27;
             // 
             // label6
             // 
@@ -244,21 +246,21 @@ namespace CABELENDÁRIO
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(580, 450);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtCpfDonoBarbearia);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtNomeDonoBarbearia);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtEndereçoBarbearia);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNomeBarbearia);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -283,21 +285,21 @@ namespace CABELENDÁRIO
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNomeBarbearia;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtEndereçoBarbearia;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNomeDonoBarbearia;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtCpfDonoBarbearia;
         private System.Windows.Forms.Label label6;
     }
 }

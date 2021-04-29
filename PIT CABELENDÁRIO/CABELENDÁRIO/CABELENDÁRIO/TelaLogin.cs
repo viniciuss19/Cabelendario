@@ -14,13 +14,17 @@ namespace CABELENDÁRIO
     
     public partial class TelaLogin : Form
     {
+        private List<Cliente> LoginsArmazenado;
+
         public TelaLogin()
         {
-
            
             InitializeComponent();
             
+
         }
+
+       
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -61,21 +65,23 @@ namespace CABELENDÁRIO
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            
-            if(txtUsername.Text == "a" && txtPassword.Text == "1")
-            {
-               new Menu().Show();
-                this.Hide();
-            }
 
-            else
-            {
-                MessageBox.Show("O nome de usuário ou senha está incorreto,tente novamente.");
-                txtUsername.Clear();
-                txtPassword.Clear();
-                txtUsername.Focus();
-            }
+           
+                if (txtUsername.Text == "usuario" && txtPassword.Text == "123")
+                {
+                    new Menu().Show();
+                    this.Hide();
+                }
+
+                else
+                {
+                    MessageBox.Show("O nome de usuário ou senha está incorreto,tente novamente.");
+                    txtUsername.Clear();
+                    txtPassword.Clear();
+                    txtUsername.Focus();
+                }
+            
+                
         }
 
         private void label3_Click(object sender, EventArgs e)

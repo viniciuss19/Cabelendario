@@ -161,5 +161,14 @@
   <ItemGroup>
     <None Include="Resources\endereco.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-magnifying-glass-green-glass-word-5ae5203f641930.69370906152496543941.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lupa-Verde-PNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jacobs img.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

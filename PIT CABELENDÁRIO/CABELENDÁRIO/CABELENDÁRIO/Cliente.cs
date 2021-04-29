@@ -26,6 +26,9 @@ namespace CABELENDÁRIO
             get => _cpf;
             set => _cpf = value;
         }
-        
+        public Cliente()
+        {
+
+        }
     }
 }

@@ -153,6 +153,36 @@ namespace CABELENDÁRIO.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Jacobs_img {
+            get {
+                object obj = ResourceManager.GetObject("Jacobs img", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_magnifying_glass_green_glass_word_5ae5203f641930_69370906152496543941 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-magnifying-glass-green-glass-word-5ae5203f641930.69370906152496543941", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lupa_Verde_PNG {
+            get {
+                object obj = ResourceManager.GetObject("Lupa-Verde-PNG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tesororora {
             get {
                 object obj = ResourceManager.GetObject("tesororora", resourceCulture);
