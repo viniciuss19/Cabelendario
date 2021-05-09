@@ -1,0 +1,14 @@
+C:\Users\Usuario\source\repos\PIT CABELENDÁRIO\CABELENDÁRIO\CABELENDÁRIO\bin\Debug\CABELENDÁRIO.exe.config
+C:\Users\Usuario\source\repos\PIT CABELENDÁRIO\CABELENDÁRIO\CABELENDÁRIO\bin\Debug\CABELENDÁRIO.exe
+C:\Users\Usuario\source\repos\PIT CABELENDÁRIO\CABELENDÁRIO\CABELENDÁRIO\bin\Debug\CABELENDÁRIO.pdb
+C:\Users\Usuario\source\repos\PIT CABELENDÁRIO\CABELENDÁRIO\CABELENDÁRIO\obj\Debug\CABELENDÁRIO.csprojAssemblyReference.cache
+C:\Users\Usuario\source\repos\PIT CABELENDÁRIO\CABELENDÁRIO\CABELENDÁRIO\obj\Debug\CABELENDÁRIO.Properties.Resources.resources
+C:\Users\Usuario\source\repos\PIT CABELENDÁRIO\CABELENDÁRIO\CABELENDÁRIO\obj\Debug\CABELENDÁRIO.csproj.GenerateResource.cache
+C:\Users\Usuario\source\repos\PIT CABELENDÁRIO\CABELENDÁRIO\CABELENDÁRIO\obj\Debug\CABELENDÁRIO.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\PIT CABELENDÁRIO\CABELENDÁRIO\CABELENDÁRIO\obj\Debug\CABELENDÁRIO.exe
+C:\Users\Usuario\source\repos\PIT CABELENDÁRIO\CABELENDÁRIO\CABELENDÁRIO\obj\Debug\CABELENDÁRIO.pdb
+C:\Users\Usuario\source\repos\PIT CABELENDÁRIO\CABELENDÁRIO\CABELENDÁRIO\obj\Debug\CABELENDÁRIO.Cadastro.resources
+C:\Users\Usuario\source\repos\PIT CABELENDÁRIO\CABELENDÁRIO\CABELENDÁRIO\obj\Debug\CABELENDÁRIO.Menu.resources
+C:\Users\Usuario\source\repos\PIT CABELENDÁRIO\CABELENDÁRIO\CABELENDÁRIO\obj\Debug\CABELENDÁRIO.CadastroCliente.resources
+C:\Users\Usuario\source\repos\PIT CABELENDÁRIO\CABELENDÁRIO\CABELENDÁRIO\obj\Debug\CABELENDÁRIO.TelaLogin.resources
+C:\Users\Usuario\source\repos\PIT CABELENDÁRIO\CABELENDÁRIO\CABELENDÁRIO\obj\Debug\CABELENDÁRIO.CadastroBarbearia.resources
