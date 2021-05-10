@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace CABELENDÁRIO
 {
@@ -40,32 +41,8 @@ namespace CABELENDÁRIO
         {
             int index = -1;
 
-            foreach (Cliente c in clientes)
-            {
-
-
-                Cliente cl = new Cliente();
-
-                cl.Nome = txtNomeCliente.Text;
-                cl.Senha = txtSenhaCliente.Text;
-                cl.cpf = txtCpfCliente.Text;
-
-                if (c.Nome == txtNomeCliente.Text)
-                {
-                    index = clientes.IndexOf(c);
-                }
-
-                if (index < 0)
-                {
-                    clientes.Add(cl);
-                }
-                else
-                {
-                    clientes[index] = cl;
-                }
-
-
-            }
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = ;
 
 
 

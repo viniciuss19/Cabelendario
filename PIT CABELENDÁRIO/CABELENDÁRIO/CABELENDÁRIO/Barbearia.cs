@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CABELENDÁRIO
 {
-    class Barbearia
+    class Barbearia: Usuario
     {
         private string _nomebarbearia;
         public string nomebarbearia
@@ -27,12 +27,18 @@ namespace CABELENDÁRIO
             set => _nomedono = value;
         }
         private string _cpfdono;
+
+        public Barbearia()
+        {
+        }
+
         public string cpfdono
         {
             get => _nomedono;
             set => _nomedono = value;
 
         }
+        
 
             
 

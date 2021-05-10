@@ -45,5 +45,10 @@ namespace CABELENDÁRIO
                 MessageBox.Show("Você precisa selecionar uma barbearia primeiro!");
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

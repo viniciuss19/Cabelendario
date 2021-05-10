@@ -29,7 +29,6 @@ namespace CABELENDÁRIO
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuconfigs = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Barb1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -42,26 +41,12 @@ namespace CABELENDÁRIO
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuconfigs
-            // 
-            this.menuconfigs.BackColor = System.Drawing.Color.SpringGreen;
-            this.menuconfigs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.menuconfigs.Font = new System.Drawing.Font("Bauhaus 93", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuconfigs.ForeColor = System.Drawing.Color.White;
-            this.menuconfigs.Location = new System.Drawing.Point(12, 15);
-            this.menuconfigs.Name = "menuconfigs";
-            this.menuconfigs.Size = new System.Drawing.Size(77, 64);
-            this.menuconfigs.TabIndex = 0;
-            this.menuconfigs.Text = "config";
-            this.menuconfigs.UseVisualStyleBackColor = false;
-            this.menuconfigs.Click += new System.EventHandler(this.menuconfigs_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Bauhaus 93", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.SpringGreen;
+            this.label1.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.label1.Location = new System.Drawing.Point(337, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(141, 54);
@@ -73,7 +58,7 @@ namespace CABELENDÁRIO
             this.Barb1.BackgroundImage = global::CABELENDÁRIO.Properties.Resources.Jacobs_img;
             this.Barb1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Barb1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Barb1.ForeColor = System.Drawing.Color.SpringGreen;
+            this.Barb1.ForeColor = System.Drawing.Color.Black;
             this.Barb1.Location = new System.Drawing.Point(124, 71);
             this.Barb1.Name = "Barb1";
             this.Barb1.Size = new System.Drawing.Size(573, 55);
@@ -91,13 +76,14 @@ namespace CABELENDÁRIO
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Barb2
             // 
             this.Barb2.BackgroundImage = global::CABELENDÁRIO.Properties.Resources.Jacobs_img;
             this.Barb2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Barb2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Barb2.ForeColor = System.Drawing.Color.SpringGreen;
+            this.Barb2.ForeColor = System.Drawing.Color.Black;
             this.Barb2.Location = new System.Drawing.Point(124, 132);
             this.Barb2.Name = "Barb2";
             this.Barb2.Size = new System.Drawing.Size(573, 54);
@@ -110,7 +96,7 @@ namespace CABELENDÁRIO
             this.Barb3.BackgroundImage = global::CABELENDÁRIO.Properties.Resources.Jacobs_img;
             this.Barb3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Barb3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Barb3.ForeColor = System.Drawing.Color.SpringGreen;
+            this.Barb3.ForeColor = System.Drawing.Color.Black;
             this.Barb3.Location = new System.Drawing.Point(124, 192);
             this.Barb3.Name = "Barb3";
             this.Barb3.Size = new System.Drawing.Size(573, 52);
@@ -123,7 +109,7 @@ namespace CABELENDÁRIO
             this.Barb4.BackgroundImage = global::CABELENDÁRIO.Properties.Resources.Jacobs_img;
             this.Barb4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Barb4.Font = new System.Drawing.Font("Bahnschrift SemiBold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Barb4.ForeColor = System.Drawing.Color.SpringGreen;
+            this.Barb4.ForeColor = System.Drawing.Color.Black;
             this.Barb4.Location = new System.Drawing.Point(124, 250);
             this.Barb4.Name = "Barb4";
             this.Barb4.Size = new System.Drawing.Size(573, 50);
@@ -133,7 +119,7 @@ namespace CABELENDÁRIO
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.SpringGreen;
+            this.button5.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Bauhaus 93", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
@@ -150,7 +136,7 @@ namespace CABELENDÁRIO
             this.Barb5.BackgroundImage = global::CABELENDÁRIO.Properties.Resources.Jacobs_img;
             this.Barb5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Barb5.Font = new System.Drawing.Font("Bahnschrift SemiBold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Barb5.ForeColor = System.Drawing.Color.SpringGreen;
+            this.Barb5.ForeColor = System.Drawing.Color.Black;
             this.Barb5.Location = new System.Drawing.Point(124, 306);
             this.Barb5.Name = "Barb5";
             this.Barb5.Size = new System.Drawing.Size(573, 48);
@@ -160,7 +146,7 @@ namespace CABELENDÁRIO
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.SpringGreen;
+            this.button7.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Bauhaus 93", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
@@ -187,7 +173,6 @@ namespace CABELENDÁRIO
             this.Controls.Add(this.Barb1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.menuconfigs);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -200,8 +185,6 @@ namespace CABELENDÁRIO
         }
 
         #endregion
-
-        private System.Windows.Forms.Button menuconfigs;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Barb1;

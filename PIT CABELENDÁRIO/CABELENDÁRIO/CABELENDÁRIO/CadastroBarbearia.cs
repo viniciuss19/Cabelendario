@@ -79,6 +79,7 @@ namespace CABELENDÁRIO
             else
             {
                 new TelaLogin().Show();
+                this.Hide();
             }
 
             
