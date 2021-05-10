@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace CABELENDÁRIO
 {
@@ -33,28 +34,25 @@ namespace CABELENDÁRIO
         {
             int index = -1;
 
-            foreach (Barbearia b in barbearias)
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = @"Data Source=DESKTOP-SO3COJV;Initial Catalog=Cabelendário;Integrated Security=True";
+            SqlCommand sql = new SqlCommand();
+            sql.Connection = conexao;
+            sql.CommandText = "INSERT INTO Barbearias (NomeBarbearia,EndereçoBarbearia,UserDonoBarbearia,CPFDonoBarbearia) VALUES (@nomebarbearia,@endereçobarbearia,@userdonobarbearia,@cpfdonobarbearia)";
+            sql.Parameters.AddWithValue("@nomebarbearia", txtNomeBarbearia.Text);
+            sql.Parameters.AddWithValue("@endereçobarbearia", txtEndereçoBarbearia.Text);
+            sql.Parameters.AddWithValue("@userdonobarbearia", txtNomeDonoBarbearia.Text);
+            sql.Parameters.AddWithValue("@cpfdonobarbearia", txtCpfDonoBarbearia.Text);
+
+            conexao.Open();
+            int i = sql.ExecuteNonQuery();
+            conexao.Close();
+            if (i > 0)
             {
-                Barbearia barb = new Barbearia();
-
-                barb.nomebarbearia = txtNomeBarbearia.Text;
-                barb.endereçobarbearia = txtEndereçoBarbearia.Text;
-                barb.nomedono = txtNomeDonoBarbearia.Text;
-                barb.cpfdono = txtCpfDonoBarbearia.Text;
-
-                if (barb.nomebarbearia == txtNomeBarbearia.Text)
-                {
-                    index = barbearias.IndexOf(b);
-                }
-                if (index < 0)
-                {
-                    barbearias.Add(barb);
-                }
-                else
-                {
-                    barbearias[index] = barb;
-                }
+                MessageBox.Show($"A barbearia {txtNomeBarbearia.Text} foi realizado com sucesso!");
             }
+            else MessageBox.Show($"Erro ao cadastrar");
+
 
             if (txtNomeBarbearia.Text == "")
             {

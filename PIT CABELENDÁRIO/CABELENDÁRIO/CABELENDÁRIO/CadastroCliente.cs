@@ -39,10 +39,32 @@ namespace CABELENDÁRIO
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int index = -1;
 
             SqlConnection conexao = new SqlConnection();
-            conexao.ConnectionString = ;
+            conexao.ConnectionString = @"Data Source=DESKTOP-SO3COJV;Initial Catalog=Cabelendário;Integrated Security=True";
+            SqlCommand sql = new SqlCommand();
+            sql.Connection = conexao;
+            sql.CommandText = "INSERT INTO Clientes (UserCliente,SenhaCliente,CPFCliente) VALUES (@usercliente,@senhacliente,@cpfcliente)";
+            sql.Parameters.AddWithValue("@usercliente", txtNomeCliente.Text);
+            sql.Parameters.AddWithValue("@senhacliente", txtSenhaCliente.Text);
+            sql.Parameters.AddWithValue("@cpfcliente", txtCpfCliente.Text);
+
+            conexao.Open();
+            int i = sql.ExecuteNonQuery();
+            conexao.Close();
+            if (i > 0)
+            {
+                MessageBox.Show($"O cliente {txtNomeCliente.Text} foi realizado com sucesso!");
+            }
+            else MessageBox.Show($"Erro ao cadastrar");
+
+
+
+
+            int index = -1;
+
+          
+           
 
 
 

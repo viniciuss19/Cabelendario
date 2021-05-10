@@ -10,17 +10,21 @@ using System.Windows.Forms;
 
 namespace CABELENDÁRIO
 {
-    public partial class Agendamento : Form
+    public partial class MenuBarbeariaGerenciar : Form
     {
-        public Agendamento()
+        public MenuBarbeariaGerenciar()
         {
             InitializeComponent();
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-            new MenuCliente().Show();
-            this.Close();
+            Application.Exit();
+        }
+
+        private void buttonAdicionarHorariosGB_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
