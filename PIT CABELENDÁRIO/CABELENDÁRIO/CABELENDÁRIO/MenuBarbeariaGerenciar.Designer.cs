@@ -30,17 +30,27 @@ namespace CABELENDÁRIO
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.listHorariosDisponiveisGB = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.listServiçosDisponíveisGB = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonAdicionarHorariosGB = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.buttonAdicionarServiçosGB = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbDias = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.dgvServiçosAgendar = new System.Windows.Forms.DataGridView();
+            this.dgvHorarios = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tbHoras = new System.Windows.Forms.TextBox();
+            this.tbServiços = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tbPreçoServiço = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvServiçosAgendar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHorarios)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -54,39 +64,23 @@ namespace CABELENDÁRIO
             this.label1.TabIndex = 0;
             this.label1.Text = "MENU DE GERENCIAMENTO DA BARBEARIA";
             // 
-            // listHorariosDisponiveisGB
-            // 
-            this.listHorariosDisponiveisGB.FormattingEnabled = true;
-            this.listHorariosDisponiveisGB.Location = new System.Drawing.Point(12, 163);
-            this.listHorariosDisponiveisGB.Name = "listHorariosDisponiveisGB";
-            this.listHorariosDisponiveisGB.Size = new System.Drawing.Size(303, 56);
-            this.listHorariosDisponiveisGB.TabIndex = 1;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label2.Location = new System.Drawing.Point(12, 127);
+            this.label2.Location = new System.Drawing.Point(18, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(197, 33);
             this.label2.TabIndex = 2;
             this.label2.Text = "Horários disponíveis:";
-            // 
-            // listServiçosDisponíveisGB
-            // 
-            this.listServiçosDisponíveisGB.FormattingEnabled = true;
-            this.listServiçosDisponíveisGB.Location = new System.Drawing.Point(18, 306);
-            this.listServiçosDisponíveisGB.Name = "listServiçosDisponíveisGB";
-            this.listServiçosDisponíveisGB.Size = new System.Drawing.Size(303, 56);
-            this.listServiçosDisponíveisGB.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label3.Location = new System.Drawing.Point(12, 270);
+            this.label3.Location = new System.Drawing.Point(15, 228);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(200, 33);
             this.label3.TabIndex = 4;
@@ -96,11 +90,11 @@ namespace CABELENDÁRIO
             // 
             this.buttonAdicionarHorariosGB.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.buttonAdicionarHorariosGB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAdicionarHorariosGB.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAdicionarHorariosGB.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAdicionarHorariosGB.ForeColor = System.Drawing.Color.White;
-            this.buttonAdicionarHorariosGB.Location = new System.Drawing.Point(343, 214);
+            this.buttonAdicionarHorariosGB.Location = new System.Drawing.Point(343, 187);
             this.buttonAdicionarHorariosGB.Name = "buttonAdicionarHorariosGB";
-            this.buttonAdicionarHorariosGB.Size = new System.Drawing.Size(205, 44);
+            this.buttonAdicionarHorariosGB.Size = new System.Drawing.Size(97, 38);
             this.buttonAdicionarHorariosGB.TabIndex = 14;
             this.buttonAdicionarHorariosGB.Text = "Adicionar";
             this.buttonAdicionarHorariosGB.UseVisualStyleBackColor = false;
@@ -112,9 +106,9 @@ namespace CABELENDÁRIO
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(44, 389);
+            this.button5.Location = new System.Drawing.Point(12, 386);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(168, 49);
+            this.button5.Size = new System.Drawing.Size(168, 41);
             this.button5.TabIndex = 16;
             this.button5.Text = "SAIR";
             this.button5.UseVisualStyleBackColor = false;
@@ -124,52 +118,164 @@ namespace CABELENDÁRIO
             // 
             this.buttonAdicionarServiçosGB.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.buttonAdicionarServiçosGB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAdicionarServiçosGB.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAdicionarServiçosGB.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAdicionarServiçosGB.ForeColor = System.Drawing.Color.White;
-            this.buttonAdicionarServiçosGB.Location = new System.Drawing.Point(343, 386);
+            this.buttonAdicionarServiçosGB.Location = new System.Drawing.Point(343, 362);
             this.buttonAdicionarServiçosGB.Name = "buttonAdicionarServiçosGB";
-            this.buttonAdicionarServiçosGB.Size = new System.Drawing.Size(205, 44);
+            this.buttonAdicionarServiçosGB.Size = new System.Drawing.Size(97, 44);
             this.buttonAdicionarServiçosGB.TabIndex = 17;
             this.buttonAdicionarServiçosGB.Text = "Adicionar";
             this.buttonAdicionarServiçosGB.UseVisualStyleBackColor = false;
+            this.buttonAdicionarServiçosGB.Click += new System.EventHandler(this.buttonAdicionarServiçosGB_Click);
             // 
-            // textBox1
+            // tbDias
             // 
-            this.textBox1.Location = new System.Drawing.Point(343, 145);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(205, 63);
-            this.textBox1.TabIndex = 18;
+            this.tbDias.Location = new System.Drawing.Point(343, 110);
+            this.tbDias.Multiline = true;
+            this.tbDias.Name = "tbDias";
+            this.tbDias.Size = new System.Drawing.Size(205, 20);
+            this.tbDias.TabIndex = 18;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.25F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label4.Location = new System.Drawing.Point(318, 119);
+            this.label4.Location = new System.Drawing.Point(319, 133);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(257, 22);
+            this.label4.Size = new System.Drawing.Size(256, 22);
             this.label4.TabIndex = 19;
-            this.label4.Text = "Digite os horários que serão adicionados:";
+            this.label4.Text = "Digite os horários que serão gerenciados";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Bahnschrift Condensed", 13F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label5.Location = new System.Drawing.Point(319, 292);
+            this.label5.Location = new System.Drawing.Point(318, 251);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(256, 22);
+            this.label5.Size = new System.Drawing.Size(258, 22);
             this.label5.TabIndex = 20;
-            this.label5.Text = "Digite os serviços que serão adicionados:";
+            this.label5.Text = "Digite os serviços que serão gerenciados:";
             // 
-            // textBox2
+            // dgvServiçosAgendar
             // 
-            this.textBox2.Location = new System.Drawing.Point(343, 317);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(205, 63);
-            this.textBox2.TabIndex = 21;
+            this.dgvServiçosAgendar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvServiçosAgendar.Location = new System.Drawing.Point(12, 264);
+            this.dgvServiçosAgendar.Name = "dgvServiçosAgendar";
+            this.dgvServiçosAgendar.Size = new System.Drawing.Size(246, 105);
+            this.dgvServiçosAgendar.TabIndex = 22;
+            // 
+            // dgvHorarios
+            // 
+            this.dgvHorarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHorarios.Location = new System.Drawing.Point(12, 112);
+            this.dgvHorarios.Name = "dgvHorarios";
+            this.dgvHorarios.Size = new System.Drawing.Size(246, 113);
+            this.dgvHorarios.TabIndex = 23;
+            this.dgvHorarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Bahnschrift Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(405, 412);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(92, 21);
+            this.button2.TabIndex = 25;
+            this.button2.Text = "Atualizar";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.25F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.label6.Location = new System.Drawing.Point(318, 85);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(232, 22);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "Digite os dias que serão gerenciados:";
+            // 
+            // tbHoras
+            // 
+            this.tbHoras.Location = new System.Drawing.Point(343, 158);
+            this.tbHoras.Multiline = true;
+            this.tbHoras.Name = "tbHoras";
+            this.tbHoras.Size = new System.Drawing.Size(205, 20);
+            this.tbHoras.TabIndex = 27;
+            // 
+            // tbServiços
+            // 
+            this.tbServiços.Location = new System.Drawing.Point(343, 276);
+            this.tbServiços.Multiline = true;
+            this.tbServiços.Name = "tbServiços";
+            this.tbServiços.Size = new System.Drawing.Size(205, 23);
+            this.tbServiços.TabIndex = 21;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Bahnschrift Condensed", 13F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.label7.Location = new System.Drawing.Point(318, 302);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(234, 22);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "Digite o preço do serviço à adicionar:";
+            // 
+            // tbPreçoServiço
+            // 
+            this.tbPreçoServiço.Location = new System.Drawing.Point(343, 333);
+            this.tbPreçoServiço.Multiline = true;
+            this.tbPreçoServiço.Name = "tbPreçoServiço";
+            this.tbPreçoServiço.Size = new System.Drawing.Size(205, 23);
+            this.tbPreçoServiço.TabIndex = 29;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(455, 187);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(97, 38);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "Remover";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Bahnschrift Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(405, 227);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(87, 21);
+            this.button3.TabIndex = 31;
+            this.button3.Text = "Atualizar";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(455, 362);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(97, 44);
+            this.button4.TabIndex = 32;
+            this.button4.Text = "Remover";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // MenuBarbeariaGerenciar
             // 
@@ -177,22 +283,33 @@ namespace CABELENDÁRIO
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(580, 450);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.tbPreçoServiço);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.tbHoras);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.dgvHorarios);
+            this.Controls.Add(this.dgvServiçosAgendar);
+            this.Controls.Add(this.tbServiços);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbDias);
             this.Controls.Add(this.buttonAdicionarServiçosGB);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.buttonAdicionarHorariosGB);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.listServiçosDisponíveisGB);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.listHorariosDisponiveisGB);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MenuBarbeariaGerenciar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuBarbeariaGerenciar";
+            this.Load += new System.EventHandler(this.MenuBarbeariaGerenciar_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvServiçosAgendar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHorarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,16 +318,24 @@ namespace CABELENDÁRIO
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox listHorariosDisponiveisGB;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox listServiçosDisponíveisGB;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonAdicionarHorariosGB;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button buttonAdicionarServiçosGB;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbDias;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DataGridView dgvServiçosAgendar;
+        private System.Windows.Forms.DataGridView dgvHorarios;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tbHoras;
+        private System.Windows.Forms.TextBox tbServiços;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox tbPreçoServiço;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

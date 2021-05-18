@@ -32,26 +32,9 @@ namespace CABELENDÁRIO
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int index = -1;
 
-            SqlConnection conexao = new SqlConnection();
-            conexao.ConnectionString = @"Data Source=DESKTOP-SO3COJV;Initial Catalog=Cabelendário;Integrated Security=True";
-            SqlCommand sql = new SqlCommand();
-            sql.Connection = conexao;
-            sql.CommandText = "INSERT INTO Barbearias (NomeBarbearia,EndereçoBarbearia,UserDonoBarbearia,CPFDonoBarbearia) VALUES (@nomebarbearia,@endereçobarbearia,@userdonobarbearia,@cpfdonobarbearia)";
-            sql.Parameters.AddWithValue("@nomebarbearia", txtNomeBarbearia.Text);
-            sql.Parameters.AddWithValue("@endereçobarbearia", txtEndereçoBarbearia.Text);
-            sql.Parameters.AddWithValue("@userdonobarbearia", txtNomeDonoBarbearia.Text);
-            sql.Parameters.AddWithValue("@cpfdonobarbearia", txtCpfDonoBarbearia.Text);
-
-            conexao.Open();
-            int i = sql.ExecuteNonQuery();
-            conexao.Close();
-            if (i > 0)
-            {
-                MessageBox.Show($"A barbearia {txtNomeBarbearia.Text} foi realizado com sucesso!");
-            }
-            else MessageBox.Show($"Erro ao cadastrar");
+            CadastrarBabearia();
+         
 
 
             if (txtNomeBarbearia.Text == "")
@@ -86,6 +69,36 @@ namespace CABELENDÁRIO
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        public void CadastrarBabearia()
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = @"Data Source=DESKTOP-SO3COJV;Initial Catalog=Cabelendário;Integrated Security=True";
+            SqlCommand sql = new SqlCommand();
+            sql.Connection = conexao;
+            sql.CommandText = "INSERT INTO Barbearias (NomeBarbearia,EndereçoBarbearia,UserDonoBarbearia,CPFDonoBarbearia) VALUES (@nomebarbearia,@endereçobarbearia,@userdonobarbearia,@cpfdonobarbearia)";
+            sql.Parameters.AddWithValue("@nomebarbearia", txtNomeBarbearia.Text);
+            sql.Parameters.AddWithValue("@endereçobarbearia", txtEndereçoBarbearia.Text);
+            sql.Parameters.AddWithValue("@userdonobarbearia", txtNomeDonoBarbearia.Text);
+            sql.Parameters.AddWithValue("@cpfdonobarbearia", txtCpfDonoBarbearia.Text);
+
+            conexao.Open();
+            int i = sql.ExecuteNonQuery();
+            conexao.Close();
+
+           
+            
+            
+                
+            
+
+            if (i > 0)
+            {
+                MessageBox.Show($"o cadastro da  barbearia {txtNomeBarbearia.Text} foi realizado com sucesso!");
+                new TelaLogin().Show();
+                this.Hide();
+            }
+            else MessageBox.Show($"Erro ao cadastrar");
         }
     }
 }

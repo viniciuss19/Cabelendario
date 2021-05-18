@@ -31,14 +31,13 @@ namespace CABELENDÁRIO
         {
             this.label1 = new System.Windows.Forms.Label();
             this.Barb1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Barb2 = new System.Windows.Forms.Button();
             this.Barb3 = new System.Windows.Forms.Button();
             this.Barb4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.Barb5 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -64,18 +63,7 @@ namespace CABELENDÁRIO
             this.Barb1.TabIndex = 3;
             this.Barb1.Text = "Barbearia 1";
             this.Barb1.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.pictureBox1.Image = global::CABELENDÁRIO.Properties.Resources.Lupa_Verde_PNG;
-            this.pictureBox1.Location = new System.Drawing.Point(723, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(65, 61);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.Barb1.Click += new System.EventHandler(this.Barb1_Click);
             // 
             // Barb2
             // 
@@ -88,6 +76,7 @@ namespace CABELENDÁRIO
             this.Barb2.TabIndex = 7;
             this.Barb2.Text = "Barbearia 2";
             this.Barb2.UseVisualStyleBackColor = true;
+            this.Barb2.Click += new System.EventHandler(this.Barb2_Click);
             // 
             // Barb3
             // 
@@ -100,6 +89,7 @@ namespace CABELENDÁRIO
             this.Barb3.TabIndex = 8;
             this.Barb3.Text = "Barbearia 3";
             this.Barb3.UseVisualStyleBackColor = true;
+            this.Barb3.Click += new System.EventHandler(this.Barb3_Click);
             // 
             // Barb4
             // 
@@ -112,6 +102,7 @@ namespace CABELENDÁRIO
             this.Barb4.TabIndex = 9;
             this.Barb4.Text = "Barbearia 4";
             this.Barb4.UseVisualStyleBackColor = true;
+            this.Barb4.Click += new System.EventHandler(this.Barb4_Click);
             // 
             // button5
             // 
@@ -138,6 +129,7 @@ namespace CABELENDÁRIO
             this.Barb5.TabIndex = 11;
             this.Barb5.Text = "Barbearia 5";
             this.Barb5.UseVisualStyleBackColor = true;
+            this.Barb5.Click += new System.EventHandler(this.Barb5_Click);
             // 
             // button7
             // 
@@ -153,12 +145,27 @@ namespace CABELENDÁRIO
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(616, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(172, 32);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Ver meus horários agendados";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MenuCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.Barb5);
             this.Controls.Add(this.button5);
@@ -167,20 +174,17 @@ namespace CABELENDÁRIO
             this.Controls.Add(this.Barb2);
             this.Controls.Add(this.Barb1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MenuCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Form2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Barb1;
         private System.Windows.Forms.Button Barb2;
@@ -189,5 +193,6 @@ namespace CABELENDÁRIO
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button Barb5;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button1;
     }
 }

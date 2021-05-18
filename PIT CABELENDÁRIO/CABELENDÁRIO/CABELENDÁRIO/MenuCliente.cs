@@ -12,7 +12,7 @@ namespace CABELENDÁRIO
 {
     public partial class MenuCliente : Form
     {
-        public static string barbeariaselecionada = "";
+        public  string barbeariaselecionada = "";
         public MenuCliente()
         {
             InitializeComponent();
@@ -44,11 +44,48 @@ namespace CABELENDÁRIO
             {
                 MessageBox.Show("Você precisa selecionar uma barbearia primeiro!");
             }
+            else
+            {
+                new Agendamento().Show();
+                this.Hide();
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void Barb1_Click(object sender, EventArgs e)
+        {
+            barbeariaselecionada = Barb1.Text;
+        }
+
+        private void Barb2_Click(object sender, EventArgs e)
+        {
+            barbeariaselecionada = Barb2.Text;
+        }
+
+        private void Barb3_Click(object sender, EventArgs e)
+        {
+            barbeariaselecionada = Barb3.Text;
+           
+        }
+
+        private void Barb4_Click(object sender, EventArgs e)
+        {
+            barbeariaselecionada = Barb4.Text;
+        }
+
+        private void Barb5_Click(object sender, EventArgs e)
+        {
+            barbeariaselecionada = Barb5.Text;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new MostrarAgendamentos().Show();
+            this.Hide();
         }
     }
 }

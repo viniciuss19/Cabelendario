@@ -56,6 +56,13 @@
       <DependentUpon>Agendamento.cs</DependentUpon>
     </Compile>
     <Compile Include="Barbearia.cs" />
+    <Compile Include="MostrarAgendamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarAgendamentos.Designer.cs">
+      <DependentUpon>MostrarAgendamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema.cs" />
     <Compile Include="Cadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +83,7 @@
     </Compile>
     <Compile Include="Cliente.cs" />
     <Compile Include="ConsoleCabelendario.cs" />
+    <Compile Include="Horário.cs" />
     <Compile Include="MenuBarbeariaGerenciar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuBarbeariaGerenciar.resx">
       <DependentUpon>MenuBarbeariaGerenciar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarAgendamentos.resx">
+      <DependentUpon>MostrarAgendamentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaLogin.resx">
       <DependentUpon>TelaLogin.cs</DependentUpon>

@@ -21,14 +21,22 @@ namespace CABELENDÁRIO
             set => _senha = value;
         }
         private string _cpf;
-        public string cpf
+        public string Cpf
         {
             get => _cpf;
             set => _cpf = value;
         }
-        public Cliente()
+        public Cliente(string nome, string senha, string cpf)
         {
-
+            nome = Nome;
+            senha = Senha;
+            cpf = Cpf;
         }
+        public Cliente(string nome, string cpf)
+        {
+            nome = Nome;
+            cpf = Cpf;
+        }
+       
     }
 }
