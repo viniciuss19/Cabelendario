@@ -30,13 +30,12 @@ namespace CABELENDÁRIO
         public void AtualizarHorariosAgendados()
         {
             SqlConnection conexao = new SqlConnection();
-            conexao.ConnectionString = @"Data Source=DESKTOP-SO3COJV;Initial Catalog=Cabelendário;Integrated Security=True";
+            conexao.ConnectionString = @"Data Source=DESKTOP-V3GENC1;Initial Catalog=BancoPIT;Integrated Security=True";
             SqlCommand sql = new SqlCommand();
             sql.Connection = conexao;
 
 
-            sql.CommandText = $"SELECT Dia,Horas,Serviço,Barbearia FROM HoráriosAgendados " +
-                $"WHERE Cliente LIKE '%{label1.Text}%'";
+            sql.CommandText = $"SELECT Dia,Horas,Serviço,Barbearia FROM HoráriosAgendados";
             try
             {
                 conexao.Open();
@@ -77,7 +76,7 @@ namespace CABELENDÁRIO
         public void DesmarcarHorario()
         {
             SqlConnection conexao = new SqlConnection();
-            conexao.ConnectionString = @"Data Source=DESKTOP-SO3COJV;Initial Catalog=Cabelendário;Integrated Security=True";
+            conexao.ConnectionString = @"Data Source=DESKTOP-V3GENC1;Initial Catalog=BancoPIT;Integrated Security=True";
             SqlCommand sql = new SqlCommand();
             sql.Connection = conexao;
 
@@ -115,7 +114,7 @@ namespace CABELENDÁRIO
         public void RetornarAgendamentosDisponivel()
         {
             SqlConnection conexao = new SqlConnection();
-            conexao.ConnectionString = @"Data Source=DESKTOP-SO3COJV;Initial Catalog=Cabelendário;Integrated Security=True";
+            conexao.ConnectionString = @"Data Source=DESKTOP-V3GENC1;Initial Catalog=BancoPIT;Integrated Security=True";
             SqlCommand sql = new SqlCommand();
             sql.Connection = conexao;
 

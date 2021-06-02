@@ -99,7 +99,7 @@ namespace CABELENDÁRIO
         public void CadastrarCliente()
         {
             SqlConnection conexao = new SqlConnection();
-            conexao.ConnectionString = @"Data Source=DESKTOP-SO3COJV;Initial Catalog=Cabelendário;Integrated Security=True";
+            conexao.ConnectionString = @"Data Source=DESKTOP-V3GENC1;Initial Catalog=BancoPIT;Integrated Security=True";
             SqlCommand sql = new SqlCommand();
             sql.Connection = conexao;
             sql.CommandText = "INSERT INTO Clientes (UserCliente,SenhaCliente,CPFCliente) VALUES (@usercliente,@senhacliente,@cpfcliente)";

@@ -32,7 +32,6 @@ namespace CABELENDÁRIO
             this.lbl1 = new System.Windows.Forms.Label();
             this.DGVHA = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.lbDias = new System.Windows.Forms.Label();
             this.lbHoras = new System.Windows.Forms.Label();
@@ -77,15 +76,6 @@ namespace CABELENDÁRIO
             this.button1.Text = "SAIR";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Henzo";
             // 
             // button2
             // 
@@ -181,7 +171,6 @@ namespace CABELENDÁRIO
             this.Controls.Add(this.lbHoras);
             this.Controls.Add(this.lbDias);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.DGVHA);
             this.Controls.Add(this.lbl1);
@@ -202,7 +191,6 @@ namespace CABELENDÁRIO
         private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.DataGridView DGVHA;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lbDias;
         private System.Windows.Forms.Label lbHoras;

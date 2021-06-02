@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CABELENDÁRIO
 {
-    class Barbearia: Usuario
+    class Barbearia
     {
         private List<Horário> _agenda = new List<Horário>();
         public List<Horário> Agenda = new List<Horário>();
@@ -31,7 +31,7 @@ namespace CABELENDÁRIO
         }
         private string _cpfdono;
 
-        public Barbearia(string nomebarbearia,string endereçobarbearia, string nomedono, string cpfdono, string nome, int id) : base(nome, id)
+        public Barbearia(string nomebarbearia,string endereçobarbearia, string nomedono, string cpfdono, string nome, int id)
         {
             nomebarbearia = NomeBarbearia;
             endereçobarbearia = EndereçoBarbearia;
