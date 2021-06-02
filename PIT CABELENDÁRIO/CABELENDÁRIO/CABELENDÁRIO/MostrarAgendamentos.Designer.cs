@@ -30,7 +30,7 @@ namespace CABELENDÁRIO
         private void InitializeComponent()
         {
             this.lbl1 = new System.Windows.Forms.Label();
-            this.DGVHA = new System.Windows.Forms.DataGridView();
+            this.DGVHorariosAgendados = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.lbDias = new System.Windows.Forms.Label();
@@ -40,7 +40,9 @@ namespace CABELENDÁRIO
             this.tbHoras = new System.Windows.Forms.TextBox();
             this.tbServiços = new System.Windows.Forms.TextBox();
             this.lbVoltar = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVHA)).BeginInit();
+            this.tbBarbearia = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVHorariosAgendados)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl1
@@ -54,14 +56,14 @@ namespace CABELENDÁRIO
             this.lbl1.TabIndex = 0;
             this.lbl1.Text = "Seus horários agendados:";
             // 
-            // DGVHA
+            // DGVHorariosAgendados
             // 
-            this.DGVHA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVHA.Location = new System.Drawing.Point(118, 57);
-            this.DGVHA.Name = "DGVHA";
-            this.DGVHA.Size = new System.Drawing.Size(351, 221);
-            this.DGVHA.TabIndex = 1;
-            this.DGVHA.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.DGVHorariosAgendados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVHorariosAgendados.Location = new System.Drawing.Point(118, 57);
+            this.DGVHorariosAgendados.Name = "DGVHorariosAgendados";
+            this.DGVHorariosAgendados.Size = new System.Drawing.Size(351, 221);
+            this.DGVHorariosAgendados.TabIndex = 1;
+            this.DGVHorariosAgendados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button1
             // 
@@ -157,12 +159,31 @@ namespace CABELENDÁRIO
             this.lbVoltar.Text = "Voltar";
             this.lbVoltar.Click += new System.EventHandler(this.lbVoltar_Click);
             // 
+            // tbBarbearia
+            // 
+            this.tbBarbearia.Location = new System.Drawing.Point(388, 293);
+            this.tbBarbearia.Name = "tbBarbearia";
+            this.tbBarbearia.Size = new System.Drawing.Size(156, 20);
+            this.tbBarbearia.TabIndex = 22;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(300, 293);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 20);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Barbearia:";
+            // 
             // MostrarAgendamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(580, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.tbBarbearia);
             this.Controls.Add(this.lbVoltar);
             this.Controls.Add(this.tbServiços);
             this.Controls.Add(this.tbHoras);
@@ -172,7 +193,7 @@ namespace CABELENDÁRIO
             this.Controls.Add(this.lbDias);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.DGVHA);
+            this.Controls.Add(this.DGVHorariosAgendados);
             this.Controls.Add(this.lbl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.HelpButton = true;
@@ -180,7 +201,7 @@ namespace CABELENDÁRIO
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MostrarAgendamentos";
             this.Load += new System.EventHandler(this.MostrarAgendamentos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DGVHA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVHorariosAgendados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,7 +210,7 @@ namespace CABELENDÁRIO
         #endregion
 
         private System.Windows.Forms.Label lbl1;
-        private System.Windows.Forms.DataGridView DGVHA;
+        private System.Windows.Forms.DataGridView DGVHorariosAgendados;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lbDias;
@@ -199,5 +220,7 @@ namespace CABELENDÁRIO
         private System.Windows.Forms.TextBox tbHoras;
         private System.Windows.Forms.TextBox tbServiços;
         private System.Windows.Forms.Label lbVoltar;
+        private System.Windows.Forms.TextBox tbBarbearia;
+        private System.Windows.Forms.Label label1;
     }
 }

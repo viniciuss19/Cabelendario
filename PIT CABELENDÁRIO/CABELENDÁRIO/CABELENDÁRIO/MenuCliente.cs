@@ -27,7 +27,12 @@ namespace CABELENDÁRIO
         private void Form2_Load(object sender, EventArgs e)
         {
             AtualizarBarbearias();
-
+            tbBarbearia.Enabled = false;
+            tbDia.Enabled = false;
+            tbHoras.Enabled = false;
+            tbPreço.Enabled = false;
+            tbEndereço.Enabled = false;
+            tbServiços.Enabled = false;
         }
 
         private void menuconfigs_Click(object sender, EventArgs e)
@@ -43,7 +48,57 @@ namespace CABELENDÁRIO
 
         private void button7_Click(object sender, EventArgs e)
         {
+            if(tbBarbearia.Text == "")
+            {
+                MessageBox.Show("Selecione uma barbearia primeiro!");
+                tbBarbearia.Focus();
 
+            }
+            else if (tbDia.Text == "")
+            {
+                MessageBox.Show("Selecione um Dia primeiro!");
+                tbDia.Focus();
+
+            }
+
+            else if (tbServiços.Text == "")
+            {
+                MessageBox.Show("Selecione um Serviço primeiro");
+                tbServiços.Focus();
+
+            }
+
+            AgendarHorário();
+
+        }
+        public void AgendarHorário()
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = "Data Source=DESKTOP-V3GENC1;Initial Catalog=BancoPIT;Integrated Security=True";
+            SqlCommand sql = new SqlCommand();
+            sql.Connection = conexao;
+
+            try
+            {
+                conexao.Open();
+                sql.CommandText = $"INSERT INTO HoráriosAgendados (Cliente,Dia,Horas,Serviço,Barbearia) VALUES (@cliente,@dia,@horas,@serviço,@barbearia)";
+                sql.Parameters.AddWithValue("@cliente", "Vinícius");
+                sql.Parameters.AddWithValue("@dia", tbDia.Text);
+                sql.Parameters.AddWithValue("@horas", tbHoras.Text);
+                sql.Parameters.AddWithValue("@serviço", tbServiços.Text);
+                sql.Parameters.AddWithValue("barbearia", tbBarbearia.Text);
+                int i = sql.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                MessageBox.Show($"O Serviço de {tbServiços.Text} foi agendado no dia {tbDia.Text} as {tbHoras.Text} na barbearia {tbBarbearia.Text} com sucesso! ");
+                conexao.Close();
+                new MostrarAgendamentos().Show();
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

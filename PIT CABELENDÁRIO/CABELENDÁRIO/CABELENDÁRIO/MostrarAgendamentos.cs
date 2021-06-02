@@ -20,7 +20,11 @@ namespace CABELENDÁRIO
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            DataGridViewRow row = this.DGVHorariosAgendados.Rows[e.RowIndex];
+            tbDias.Text = row.Cells["Dia"].Value.ToString();
+            tbHoras.Text = row.Cells["Horas"].Value.ToString();
+            tbServiços.Text = row.Cells["Serviço"].Value.ToString();
+            tbBarbearia.Text = row.Cells["Barbearia"].Value.ToString();
         }
 
         private void MostrarAgendamentos_Load(object sender, EventArgs e)
@@ -51,8 +55,8 @@ namespace CABELENDÁRIO
                 SqlDataAdapter adaptador = new SqlDataAdapter(sql.CommandText, conexao);
                 DataTable tabela = new DataTable();
                 adaptador.Fill(tabela);
-                DGVHA.DataSource = tabela;
-                DGVHA.ClearSelection();
+                DGVHorariosAgendados.DataSource = tabela;
+                DGVHorariosAgendados.ClearSelection();
                 conexao.Close();
             }
         }
@@ -84,7 +88,7 @@ namespace CABELENDÁRIO
             try
             {
                 conexao.Open();
-                sql.CommandText = "DELETE FROM HoráriosAgendados WHERE Dia = '" + tbDias.Text + " ' AND Horas = '" + tbHoras.Text + " ' AND Serviço = '" + tbServiços.Text + " '";
+                sql.CommandText = $"DELETE FROM HoráriosAgendados WHERE Dia = '{tbDias.Text}'  AND Horas = '{tbHoras.Text}' AND Serviço = '{tbServiços.Text}' AND Barbearia = '{tbBarbearia.Text}' ";
                 sql.ExecuteNonQuery();
                 
 
