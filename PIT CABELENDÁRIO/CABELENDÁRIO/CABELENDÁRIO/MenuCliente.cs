@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace CABELENDÁRIO
 {
     public partial class MenuCliente : Form
     {
-        public  string barbeariaselecionada = "";
+
         public MenuCliente()
         {
             InitializeComponent();
@@ -25,6 +26,7 @@ namespace CABELENDÁRIO
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            AtualizarBarbearias();
 
         }
 
@@ -38,48 +40,40 @@ namespace CABELENDÁRIO
             Application.Exit();
         }
 
+
         private void button7_Click(object sender, EventArgs e)
         {
-            if (barbeariaselecionada == "")
-            {
-                MessageBox.Show("Você precisa selecionar uma barbearia primeiro!");
-            }
-            else
-            {
-                new Agendamento().Show();
-                this.Hide();
-            }
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Barb1_Click(object sender, EventArgs e)
         {
-            barbeariaselecionada = Barb1.Text;
+
         }
 
         private void Barb2_Click(object sender, EventArgs e)
         {
-            barbeariaselecionada = Barb2.Text;
+
         }
 
         private void Barb3_Click(object sender, EventArgs e)
         {
-            barbeariaselecionada = Barb3.Text;
-           
+
+
         }
 
         private void Barb4_Click(object sender, EventArgs e)
         {
-            barbeariaselecionada = Barb4.Text;
         }
 
         private void Barb5_Click(object sender, EventArgs e)
         {
-            barbeariaselecionada = Barb5.Text;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -87,5 +81,35 @@ namespace CABELENDÁRIO
             new MostrarAgendamentos().Show();
             this.Hide();
         }
+
+        public void AtualizarBarbearias()
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = @"Data Source=DESKTOP-V3GENC1;Initial Catalog=BancoPIT;Integrated Security=True";
+            SqlCommand sql = new SqlCommand();
+            sql.Connection = conexao;
+
+            sql.CommandText = "Select NomeBarbearia,EndereçoBarbearia FROM Barbearias";
+            try
+            {
+                conexao.Open();
+                int i = sql.ExecuteNonQuery();
+
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.ToString());
+            }
+            finally
+            {
+                SqlDataAdapter adaptador = new SqlDataAdapter(sql.CommandText, conexao);
+                DataTable tabela = new DataTable();
+                adaptador.Fill(tabela);
+                dgvBarbearias.DataSource = tabela;
+                dgvBarbearias.ClearSelection();
+                conexao.Close();
+            }
+        }
+
     }
 }

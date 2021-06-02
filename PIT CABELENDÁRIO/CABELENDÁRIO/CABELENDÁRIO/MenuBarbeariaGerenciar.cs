@@ -25,7 +25,20 @@ namespace CABELENDÁRIO
 
         private void buttonAdicionarHorariosGB_Click(object sender, EventArgs e)
         {
-            AdicionarHorario();
+            if (tbDias.Text == "")
+            {
+                MessageBox.Show("Preencha o dia!");
+                tbDias.Focus();
+            }
+            else if (tbHoras.Text == "")
+            {
+                MessageBox.Show("Preencha as Horas");
+                tbHoras.Focus();
+            }
+            else
+            {
+                AdicionarHorario();
+            }
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -100,7 +113,20 @@ namespace CABELENDÁRIO
 
         private void buttonAdicionarServiçosGB_Click(object sender, EventArgs e)
         {
-            AdicionarServiços();
+            if (tbServiços.Text == "")
+            {
+                MessageBox.Show("Preencha o serviço!");
+                tbServiços.Focus();
+            }
+            else if (tbPreçoServiço.Text == "")
+            {
+                MessageBox.Show("Preencha o preço do serviço!");
+                tbPreçoServiço.Focus();
+            }
+            else
+            {
+                AdicionarServiços();
+            }
         }
         public void AdicionarServiços()
         {

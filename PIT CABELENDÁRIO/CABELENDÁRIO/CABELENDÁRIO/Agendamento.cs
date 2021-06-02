@@ -212,26 +212,27 @@ namespace CABELENDÁRIO
 
         private void btAgendar_Click(object sender, EventArgs e)
         {
-            AgendarHorario();
-            RemoverHorarioAgendar();
+            if (tbDiaAgendar.Text == "")
+            {
+                MessageBox.Show("Preencha o campo de dias!");
+                tbDiaAgendar.Focus();
+            }
+            else if (tbServiçoAgendar.Text == "")
+            {
+                MessageBox.Show("Preencha o campo de serviço!");
+            }
+            else
+            {
+                AgendarHorario();
+                RemoverHorarioAgendar();
+               
+            }
             tbServiçoAgendar.Clear();
         }
         public void AgendarHorario()
         {
-            if (tbDiaAgendar.Text == "")
-            {
-                MessageBox.Show("Preencha o dia que deseja agendar!");
-            }
-            else if (tbHorarioAgendar.Text == "")
-            {
-                MessageBox.Show("Preencha o horario que deseja agendar!");
-            }
-            else if (tbServiçoAgendar.Text == "")
-            {
-                MessageBox.Show("Preencha o serviço que você deseja agendar!");
-            }
-            else
-            {
+            
+           
 
                 SqlConnection conexao = new SqlConnection();
                 conexao.ConnectionString = @"Data Source=DESKTOP-V3GENC1;Initial Catalog=BancoPIT;Integrated Security=True";
@@ -266,7 +267,7 @@ namespace CABELENDÁRIO
 
                 AtualizarHorarioAgendar();
                 AtualizarServiçosAgendar();
-            }
+            
         }
         public void RemoverHorarioAgendar()
         {
