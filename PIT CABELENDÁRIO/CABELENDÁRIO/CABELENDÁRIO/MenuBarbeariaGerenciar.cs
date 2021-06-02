@@ -91,9 +91,10 @@ namespace CABELENDÁRIO
             try
             {
                 conexao.Open();
-                sql.CommandText = "INSERT INTO Horários(dia,horas) VALUES (@Dia,@Horas)";
+                sql.CommandText = "INSERT INTO Horários(dia,horas,Barbearia) VALUES (@Dia,@Horas,@barbearia)";
                 sql.Parameters.AddWithValue("@Dia", tbDias.Text);
                 sql.Parameters.AddWithValue("@Horas", tbHoras.Text);
+                sql.Parameters.AddWithValue("@barbearia", "BarberShop");
                
                 int i = sql.ExecuteNonQuery();
             }
@@ -137,9 +138,10 @@ namespace CABELENDÁRIO
             try
             {
                 conexao.Open();
-                sql.CommandText = "INSERT INTO Serviços(Serviço,Preço) VALUES (@serviço,@preço)";
+                sql.CommandText = "INSERT INTO Serviços(Serviço,Preço,Barbearia) VALUES (@serviço,@preço,@barbearia)";
                 sql.Parameters.AddWithValue("@serviço", tbServiços.Text);
                 sql.Parameters.AddWithValue("@preço", tbPreçoServiço.Text);
+                sql.Parameters.AddWithValue("@barbearia", "BarberShop");
                 int i = sql.ExecuteNonQuery();
             }
             catch(Exception exception)

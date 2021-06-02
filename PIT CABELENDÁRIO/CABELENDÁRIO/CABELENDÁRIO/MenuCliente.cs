@@ -111,5 +111,76 @@ namespace CABELENDÁRIO
             }
         }
 
+        private void dgvBarbearias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = this.dgvBarbearias.Rows[e.RowIndex];
+            tbBarbearia.Text = row.Cells["NomeBarbearia"].Value.ToString();
+            tbEndereço.Text = row.Cells["EndereçoBarbearia"].Value.ToString();
+
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = @"Data Source=DESKTOP-V3GENC1;Initial Catalog=BancoPIT;Integrated Security=True";
+            
+            SqlCommand sql = new SqlCommand();
+            sql.Connection = conexao;
+           
+
+            try
+            {
+                conexao.Open();
+                string nomebarbearia = tbBarbearia.Text;
+                sql.CommandText = $"SELECT dia,horas,Barbearia FROM Horários WHERE Barbearia = '{nomebarbearia}'";
+                int i = sql.ExecuteNonQuery();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.ToString());
+            }
+            finally
+            {
+                SqlDataAdapter adaptador = new SqlDataAdapter(sql.CommandText, conexao);
+                DataTable tabela = new DataTable();
+                adaptador.Fill(tabela);
+                dgvHorário.DataSource = tabela;
+                dgvHorário.ClearSelection();
+                conexao.Close();
+            }
+            try
+            {
+                conexao.Open();
+                string nomebarbearia = tbBarbearia.Text;
+                sql.CommandText = $"SELECT Serviço,Preço FROM Serviços WHERE Barbearia = '{nomebarbearia}'";
+                int i = sql.ExecuteNonQuery();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                SqlDataAdapter adaptador = new SqlDataAdapter(sql.CommandText,conexao);
+                DataTable tabela = new DataTable();
+                adaptador.Fill(tabela);
+                dgvServiço.DataSource = tabela;
+                dgvServiço.ClearSelection();
+                conexao.Close();
+            }
+
+
+
+        }
+
+        private void dgvHorário_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = this.dgvHorário.Rows[e.RowIndex];
+            tbDia.Text = row.Cells["dia"].Value.ToString();
+            tbHoras.Text = row.Cells["horas"].Value.ToString();
+        }
+
+        private void dgvServiço_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = this.dgvServiço.Rows[e.RowIndex];
+            tbServiços.Text = row.Cells["Serviço"].Value.ToString();
+            tbPreço.Text = row.Cells["Preço"].Value.ToString();
+        }
     }
 }

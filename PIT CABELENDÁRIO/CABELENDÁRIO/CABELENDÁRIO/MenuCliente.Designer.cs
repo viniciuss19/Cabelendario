@@ -46,14 +46,14 @@ namespace CABELENDÁRIO
             this.label5 = new System.Windows.Forms.Label();
             this.tbHoras = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.tbServiços = new System.Windows.Forms.TextBox();
             this.tbPreço = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.tbBarbearia = new System.Windows.Forms.TextBox();
+            this.tbEndereço = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBarbearias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHorário)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServiço)).BeginInit();
@@ -116,10 +116,11 @@ namespace CABELENDÁRIO
             // dgvBarbearias
             // 
             this.dgvBarbearias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBarbearias.Location = new System.Drawing.Point(64, 90);
+            this.dgvBarbearias.Location = new System.Drawing.Point(34, 90);
             this.dgvBarbearias.Name = "dgvBarbearias";
             this.dgvBarbearias.Size = new System.Drawing.Size(245, 156);
             this.dgvBarbearias.TabIndex = 14;
+            this.dgvBarbearias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBarbearias_CellContentClick);
             // 
             // label3
             // 
@@ -127,7 +128,7 @@ namespace CABELENDÁRIO
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Bahnschrift Condensed", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label3.Location = new System.Drawing.Point(106, 45);
+            this.label3.Location = new System.Drawing.Point(90, 45);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(151, 42);
             this.label3.TabIndex = 16;
@@ -160,22 +161,24 @@ namespace CABELENDÁRIO
             // dgvHorário
             // 
             this.dgvHorário.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHorário.Location = new System.Drawing.Point(569, 90);
+            this.dgvHorário.Location = new System.Drawing.Point(555, 90);
             this.dgvHorário.Name = "dgvHorário";
-            this.dgvHorário.Size = new System.Drawing.Size(260, 142);
+            this.dgvHorário.Size = new System.Drawing.Size(307, 142);
             this.dgvHorário.TabIndex = 19;
+            this.dgvHorário.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHorário_CellContentClick);
             // 
             // dgvServiço
             // 
             this.dgvServiço.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvServiço.Location = new System.Drawing.Point(547, 280);
+            this.dgvServiço.Location = new System.Drawing.Point(590, 280);
             this.dgvServiço.Name = "dgvServiço";
-            this.dgvServiço.Size = new System.Drawing.Size(312, 126);
+            this.dgvServiço.Size = new System.Drawing.Size(240, 126);
             this.dgvServiço.TabIndex = 20;
+            this.dgvServiço.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvServiço_CellContentClick);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(64, 259);
+            this.textBox1.Location = new System.Drawing.Point(34, 257);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(245, 20);
             this.textBox1.TabIndex = 21;
@@ -183,7 +186,7 @@ namespace CABELENDÁRIO
             // panel1
             // 
             this.panel1.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.panel1.Location = new System.Drawing.Point(64, 280);
+            this.panel1.Location = new System.Drawing.Point(34, 280);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(248, 2);
             this.panel1.TabIndex = 22;
@@ -194,7 +197,7 @@ namespace CABELENDÁRIO
             this.btnPesquisarBarbearia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPesquisarBarbearia.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPesquisarBarbearia.ForeColor = System.Drawing.Color.White;
-            this.btnPesquisarBarbearia.Location = new System.Drawing.Point(123, 290);
+            this.btnPesquisarBarbearia.Location = new System.Drawing.Point(97, 288);
             this.btnPesquisarBarbearia.Name = "btnPesquisarBarbearia";
             this.btnPesquisarBarbearia.Size = new System.Drawing.Size(134, 36);
             this.btnPesquisarBarbearia.TabIndex = 23;
@@ -239,22 +242,6 @@ namespace CABELENDÁRIO
             this.label6.TabIndex = 27;
             this.label6.Text = "Horas:";
             // 
-            // panel2
-            // 
-            this.panel2.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.panel2.Location = new System.Drawing.Point(483, 216);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(66, 2);
-            this.panel2.TabIndex = 28;
-            // 
-            // panel3
-            // 
-            this.panel3.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.panel3.Location = new System.Drawing.Point(483, 157);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(66, 2);
-            this.panel3.TabIndex = 29;
-            // 
             // tbServiços
             // 
             this.tbServiços.Location = new System.Drawing.Point(469, 308);
@@ -293,21 +280,43 @@ namespace CABELENDÁRIO
             this.label8.TabIndex = 33;
             this.label8.Text = "Preço:";
             // 
-            // panel4
+            // tbBarbearia
             // 
-            this.panel4.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.panel4.Location = new System.Drawing.Point(469, 389);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(66, 2);
-            this.panel4.TabIndex = 34;
+            this.tbBarbearia.Location = new System.Drawing.Point(288, 136);
+            this.tbBarbearia.Name = "tbBarbearia";
+            this.tbBarbearia.Size = new System.Drawing.Size(104, 20);
+            this.tbBarbearia.TabIndex = 36;
             // 
-            // panel5
+            // tbEndereço
             // 
-            this.panel5.ForeColor = System.Drawing.Color.DarkSeaGreen;
-            this.panel5.Location = new System.Drawing.Point(469, 329);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(66, 2);
-            this.panel5.TabIndex = 35;
+            this.tbEndereço.Location = new System.Drawing.Point(285, 195);
+            this.tbEndereço.Name = "tbEndereço";
+            this.tbEndereço.Size = new System.Drawing.Size(104, 20);
+            this.tbEndereço.TabIndex = 37;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.White;
+            this.label9.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.label9.Location = new System.Drawing.Point(298, 108);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(86, 25);
+            this.label9.TabIndex = 38;
+            this.label9.Text = "Barbearia:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.White;
+            this.label10.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.label10.Location = new System.Drawing.Point(298, 162);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(80, 25);
+            this.label10.TabIndex = 41;
+            this.label10.Text = "Endereço:";
             // 
             // MenuCliente
             // 
@@ -315,14 +324,14 @@ namespace CABELENDÁRIO
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(889, 482);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.tbEndereço);
+            this.Controls.Add(this.tbBarbearia);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.tbPreço);
             this.Controls.Add(this.tbServiços);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tbHoras);
             this.Controls.Add(this.label5);
@@ -371,13 +380,13 @@ namespace CABELENDÁRIO
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tbHoras;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox tbServiços;
         private System.Windows.Forms.TextBox tbPreço;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.TextBox tbBarbearia;
+        private System.Windows.Forms.TextBox tbEndereço;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }
