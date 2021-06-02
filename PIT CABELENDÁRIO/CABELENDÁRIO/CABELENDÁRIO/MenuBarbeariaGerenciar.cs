@@ -30,7 +30,7 @@ namespace CABELENDÁRIO
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+             
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -45,7 +45,7 @@ namespace CABELENDÁRIO
             SqlCommand sql = new SqlCommand();
             sql.Connection = conexao;
 
-            sql.CommandText = "Select * FROM Horários";
+            sql.CommandText = "Select dia,horas FROM Horários";
             try
             {
                 conexao.Open();
@@ -136,7 +136,7 @@ namespace CABELENDÁRIO
             SqlCommand sql = new SqlCommand();
             sql.Connection = conexao;
 
-            sql.CommandText = "Select * FROM Serviços";
+            sql.CommandText = "Select Serviço,Preço FROM Serviços";
             try
             {
                 conexao.Open();
@@ -152,8 +152,8 @@ namespace CABELENDÁRIO
                 SqlDataAdapter adaptador = new SqlDataAdapter(sql.CommandText, conexao);
                 DataTable tabela = new DataTable();
                 adaptador.Fill(tabela);
-                dgvServiçosAgendar.DataSource = tabela;
-                dgvServiçosAgendar.ClearSelection();
+                dgvServiços.DataSource = tabela;
+                dgvServiços.ClearSelection();
                 conexao.Close();
             }
         }
@@ -206,6 +206,8 @@ namespace CABELENDÁRIO
         {
             AtualizarHorários();
             AtualizarServiços();
+           
+         
         }
         public void RemoverServiços()
         {
@@ -239,9 +241,36 @@ namespace CABELENDÁRIO
 
         private void button4_Click(object sender, EventArgs e)
         {
-            RemoverServiços();
+            if (tbServiços.Text == "")
+            {
+                MessageBox.Show("Preencha o campo serviços!");
+                tbServiços.Clear();
+                tbServiços.Focus();
+            }
+            else
+            {
+                RemoverServiços();
+
+            }
+            
+            
         }
-        
+
+        private void dgvServiçosAgendar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = @"Data Source=DESKTOP-V3GENC1;Initial Catalog=BancoPIT;Integrated Security=True";
+            SqlCommand sql = new SqlCommand();
+            sql.Connection = conexao;
+
+            if(e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dgvServiços.Rows[e.RowIndex];
+                tbServiços.Text = row.Cells["Serviço"].Value.ToString();
+                tbPreçoServiço.Text = row.Cells["Preço"].Value.ToString();
+                    
+            }
+        }
     }
 }
 

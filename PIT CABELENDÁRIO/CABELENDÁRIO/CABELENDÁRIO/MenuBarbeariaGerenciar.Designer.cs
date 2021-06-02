@@ -38,7 +38,7 @@ namespace CABELENDÁRIO
             this.tbDias = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dgvServiçosAgendar = new System.Windows.Forms.DataGridView();
+            this.dgvServiços = new System.Windows.Forms.DataGridView();
             this.dgvHorarios = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -49,7 +49,7 @@ namespace CABELENDÁRIO
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvServiçosAgendar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvServiços)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHorarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -158,13 +158,14 @@ namespace CABELENDÁRIO
             this.label5.TabIndex = 20;
             this.label5.Text = "Digite os serviços que serão gerenciados:";
             // 
-            // dgvServiçosAgendar
+            // dgvServiços
             // 
-            this.dgvServiçosAgendar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvServiçosAgendar.Location = new System.Drawing.Point(12, 264);
-            this.dgvServiçosAgendar.Name = "dgvServiçosAgendar";
-            this.dgvServiçosAgendar.Size = new System.Drawing.Size(246, 105);
-            this.dgvServiçosAgendar.TabIndex = 22;
+            this.dgvServiços.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvServiços.Location = new System.Drawing.Point(12, 264);
+            this.dgvServiços.Name = "dgvServiços";
+            this.dgvServiços.Size = new System.Drawing.Size(246, 105);
+            this.dgvServiços.TabIndex = 22;
+            this.dgvServiços.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvServiçosAgendar_CellContentClick);
             // 
             // dgvHorarios
             // 
@@ -292,7 +293,7 @@ namespace CABELENDÁRIO
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dgvHorarios);
-            this.Controls.Add(this.dgvServiçosAgendar);
+            this.Controls.Add(this.dgvServiços);
             this.Controls.Add(this.tbServiços);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -308,7 +309,7 @@ namespace CABELENDÁRIO
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuBarbeariaGerenciar";
             this.Load += new System.EventHandler(this.MenuBarbeariaGerenciar_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvServiçosAgendar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvServiços)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHorarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -326,7 +327,7 @@ namespace CABELENDÁRIO
         private System.Windows.Forms.TextBox tbDias;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dgvServiçosAgendar;
+        private System.Windows.Forms.DataGridView dgvServiços;
         private System.Windows.Forms.DataGridView dgvHorarios;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label6;
