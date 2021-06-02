@@ -38,12 +38,35 @@ namespace CABELENDÁRIO
             else
             {
                 AdicionarHorario();
+                AtualizarHorários();
             }
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-             
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = @"Data Source=DESKTOP-V3GENC1;Initial Catalog=BancoPIT;Integrated Security=True";
+            SqlCommand sql = new SqlCommand();
+            sql.Connection = conexao;
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dgvHorarios.Rows[e.RowIndex];
+                tbDias.Text = row.Cells["dia"].Value.ToString();
+                tbHoras.Text = row.Cells["horas"].Value.ToString();
+            }
+        }
+        private void dgvHorarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = @"Data Source=DESKTOP-V3GENC1;Initial Catalog=BancoPIT;Integrated Security=True";
+            SqlCommand sql = new SqlCommand();
+            sql.Connection = conexao;
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dgvHorarios.Rows[e.RowIndex];
+                tbDias.Text = row.Cells["dia"].Value.ToString();
+                tbHoras.Text = row.Cells["horas"].Value.ToString();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -193,7 +216,7 @@ namespace CABELENDÁRIO
 
         private void button3_Click(object sender, EventArgs e)
         {
-            AtualizarHorários();
+            EditarHorario();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -228,6 +251,10 @@ namespace CABELENDÁRIO
                 tbHoras.Clear();
                 conexao.Close();
             }
+        }
+        public void EditarHorario()
+        {
+
         }
 
         private void MenuBarbeariaGerenciar_Load(object sender, EventArgs e)

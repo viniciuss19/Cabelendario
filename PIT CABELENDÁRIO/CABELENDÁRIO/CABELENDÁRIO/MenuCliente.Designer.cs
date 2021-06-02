@@ -34,12 +34,12 @@ namespace CABELENDÁRIO
             this.button7 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvBarbearias = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblBarbearia = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvHorário = new System.Windows.Forms.DataGridView();
             this.dgvServiço = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbPesquisarBarbearia = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnPesquisarBarbearia = new System.Windows.Forms.Button();
             this.tbDia = new System.Windows.Forms.TextBox();
@@ -122,17 +122,18 @@ namespace CABELENDÁRIO
             this.dgvBarbearias.TabIndex = 14;
             this.dgvBarbearias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBarbearias_CellContentClick);
             // 
-            // label3
+            // lblBarbearia
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Bahnschrift Condensed", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label3.Location = new System.Drawing.Point(90, 45);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 42);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Barbearias:";
+            this.lblBarbearia.AutoSize = true;
+            this.lblBarbearia.BackColor = System.Drawing.Color.White;
+            this.lblBarbearia.Font = new System.Drawing.Font("Bahnschrift Condensed", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBarbearia.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.lblBarbearia.Location = new System.Drawing.Point(37, 45);
+            this.lblBarbearia.Name = "lblBarbearia";
+            this.lblBarbearia.Size = new System.Drawing.Size(151, 42);
+            this.lblBarbearia.TabIndex = 16;
+            this.lblBarbearia.Text = "Barbearias:";
+            this.lblBarbearia.Click += new System.EventHandler(this.lblBarbearia_Click);
             // 
             // label2
             // 
@@ -176,12 +177,12 @@ namespace CABELENDÁRIO
             this.dgvServiço.TabIndex = 20;
             this.dgvServiço.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvServiço_CellContentClick);
             // 
-            // textBox1
+            // tbPesquisarBarbearia
             // 
-            this.textBox1.Location = new System.Drawing.Point(34, 257);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(245, 20);
-            this.textBox1.TabIndex = 21;
+            this.tbPesquisarBarbearia.Location = new System.Drawing.Point(34, 257);
+            this.tbPesquisarBarbearia.Name = "tbPesquisarBarbearia";
+            this.tbPesquisarBarbearia.Size = new System.Drawing.Size(245, 20);
+            this.tbPesquisarBarbearia.TabIndex = 21;
             // 
             // panel1
             // 
@@ -203,6 +204,7 @@ namespace CABELENDÁRIO
             this.btnPesquisarBarbearia.TabIndex = 23;
             this.btnPesquisarBarbearia.Text = "Pesquisar";
             this.btnPesquisarBarbearia.UseVisualStyleBackColor = false;
+            this.btnPesquisarBarbearia.Click += new System.EventHandler(this.btnPesquisarBarbearia_Click);
             // 
             // tbDia
             // 
@@ -338,12 +340,12 @@ namespace CABELENDÁRIO
             this.Controls.Add(this.tbDia);
             this.Controls.Add(this.btnPesquisarBarbearia);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbPesquisarBarbearia);
             this.Controls.Add(this.dgvServiço);
             this.Controls.Add(this.dgvHorário);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblBarbearia);
             this.Controls.Add(this.dgvBarbearias);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button7);
@@ -368,12 +370,12 @@ namespace CABELENDÁRIO
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dgvBarbearias;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblBarbearia;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgvHorário;
         private System.Windows.Forms.DataGridView dgvServiço;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbPesquisarBarbearia;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnPesquisarBarbearia;
         private System.Windows.Forms.TextBox tbDia;

@@ -69,6 +69,9 @@ namespace CABELENDÁRIO
             }
 
             AgendarHorário();
+            RemoverHorário();
+        
+           
 
         }
         public void AgendarHorário()
@@ -98,10 +101,38 @@ namespace CABELENDÁRIO
                 MessageBox.Show($"O Serviço de {tbServiços.Text} foi agendado no dia {tbDia.Text} as {tbHoras.Text} na barbearia {tbBarbearia.Text} com sucesso! ");
                 conexao.Close();
                 new MostrarAgendamentos().Show();
+                this.Hide();
             }
         }
+        public void RemoverHorário()
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = @"Data Source=DESKTOP-V3GENC1;Initial Catalog=BancoPIT;Integrated Security=True";
+            SqlCommand sql = new SqlCommand();
+            sql.Connection = conexao;
+            try
+            {
+                conexao.Open();
+                sql.CommandText = $"DELETE FROM Horários WHERE Dia = '{tbDia.Text}'  AND Horas = '{tbHoras.Text}'";
+                sql.ExecuteNonQuery();
+                int i = sql.ExecuteNonQuery();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.ToString());
+            }
+            finally
+            {
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+                tbDia.Clear();
+                tbHoras.Clear();
+                conexao.Close();
+            }
+        }
+        
+            
+
+            private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
@@ -236,6 +267,45 @@ namespace CABELENDÁRIO
             DataGridViewRow row = this.dgvServiço.Rows[e.RowIndex];
             tbServiços.Text = row.Cells["Serviço"].Value.ToString();
             tbPreço.Text = row.Cells["Preço"].Value.ToString();
+        }
+
+        private void btnPesquisarBarbearia_Click(object sender, EventArgs e)
+        {
+            PesquisarBarbearia();
+        }
+        public void PesquisarBarbearia()
+        {
+            lblBarbearia.Text = $"Busca por '{tbPesquisarBarbearia.Text}'";
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = @"Data Source=DESKTOP-V3GENC1;Initial Catalog=BancoPIT;Integrated Security=True";
+            SqlCommand sql = new SqlCommand();
+            sql.Connection = conexao;
+            sql.CommandText = $"SELECT NomeBarbearia,EndereçoBarbearia FROM Barbearias " +
+                $"WHERE NomeBarbearia LIKE '%{tbPesquisarBarbearia.Text}%'";
+
+            try
+            {
+                conexao.Open();
+                int i = sql.ExecuteNonQuery();
+                SqlDataAdapter adaptador = new SqlDataAdapter(sql.CommandText, conexao);
+                DataTable tabela = new DataTable();
+                adaptador.Fill(tabela);
+                dgvBarbearias.DataSource = tabela;
+                dgvBarbearias.ClearSelection();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.ToString());
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
+        private void lblBarbearia_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -30,6 +30,10 @@ namespace CABELENDÁRIO
         private void MostrarAgendamentos_Load(object sender, EventArgs e)
         {
             AtualizarHorariosAgendados();
+            tbBarbearia.Enabled = false;
+            tbDias.Enabled = false;
+            tbHoras.Enabled = false;
+            tbServiços.Enabled = false;
         }
         public void AtualizarHorariosAgendados()
         {
@@ -103,12 +107,10 @@ namespace CABELENDÁRIO
             finally
             {
                 
-                MessageBox.Show($"Seu serviço {tbServiços.Text} no dia {tbDias.Text} às {tbHoras.Text} foi desmarcada com sucesso com sucesso");
+                MessageBox.Show($"Seu serviço {tbServiços.Text} no dia {tbDias.Text} às {tbHoras.Text} foi desmarcado com sucesso com sucesso");
                 AtualizarHorariosAgendados();
                 
-                tbDias.Clear();
-                tbHoras.Clear();
-                tbServiços.Clear();
+                
                 conexao.Close();
             }
            
@@ -126,9 +128,10 @@ namespace CABELENDÁRIO
             try
             {
                 conexao.Open();
-                sql.CommandText = "INSERT INTO Horários(dia,horas) VALUES (@Dia,@Horas)";
+                sql.CommandText = "INSERT INTO Horários(dia,horas,Barbearia) VALUES (@Dia,@Horas,@barbearia)";
                 sql.Parameters.AddWithValue("@Dia", tbDias.Text);
                 sql.Parameters.AddWithValue("@Horas", tbHoras.Text);
+                sql.Parameters.AddWithValue("@barbearia", tbBarbearia.Text);
 
                 int i = sql.ExecuteNonQuery();
             }
@@ -144,6 +147,7 @@ namespace CABELENDÁRIO
             tbDias.Text = "";
             tbHoras.Text = "";
             tbServiços.Text = "";
+            tbBarbearia.Text = "";
         }
 
         private void lbVoltar_Click(object sender, EventArgs e)
