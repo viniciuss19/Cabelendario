@@ -42,6 +42,7 @@ namespace CABELENDÁRIO
             this.lbVoltar = new System.Windows.Forms.Label();
             this.tbBarbearia = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGVHorariosAgendados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -176,12 +177,22 @@ namespace CABELENDÁRIO
             this.label1.TabIndex = 23;
             this.label1.Text = "Barbearia:";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(40, 134);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "label2";
+            // 
             // MostrarAgendamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(580, 450);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbBarbearia);
             this.Controls.Add(this.lbVoltar);
@@ -222,5 +233,6 @@ namespace CABELENDÁRIO
         private System.Windows.Forms.Label lbVoltar;
         private System.Windows.Forms.TextBox tbBarbearia;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

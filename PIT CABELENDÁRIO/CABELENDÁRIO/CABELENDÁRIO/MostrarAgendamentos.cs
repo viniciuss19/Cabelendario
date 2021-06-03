@@ -30,6 +30,7 @@ namespace CABELENDÁRIO
         private void MostrarAgendamentos_Load(object sender, EventArgs e)
         {
             AtualizarHorariosAgendados();
+            label2.Text = TelaLogin.UserCliente;
             tbBarbearia.Enabled = false;
             tbDias.Enabled = false;
             tbHoras.Enabled = false;
@@ -43,7 +44,7 @@ namespace CABELENDÁRIO
             sql.Connection = conexao;
 
 
-            sql.CommandText = $"SELECT Dia,Horas,Serviço,Barbearia FROM HoráriosAgendados";
+            sql.CommandText = $"SELECT Dia,Horas,Serviço,Barbearia FROM HoráriosAgendados WHERE Cliente = '{TelaLogin.UserCliente}'";
             try
             {
                 conexao.Open();

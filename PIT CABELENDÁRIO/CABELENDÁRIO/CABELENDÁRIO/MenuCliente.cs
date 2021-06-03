@@ -85,7 +85,7 @@ namespace CABELENDÁRIO
             {
                 conexao.Open();
                 sql.CommandText = $"INSERT INTO HoráriosAgendados (Cliente,Dia,Horas,Serviço,Barbearia) VALUES (@cliente,@dia,@horas,@serviço,@barbearia)";
-                sql.Parameters.AddWithValue("@cliente", "Vinícius");
+                sql.Parameters.AddWithValue("@cliente", TelaLogin.UserCliente);
                 sql.Parameters.AddWithValue("@dia", tbDia.Text);
                 sql.Parameters.AddWithValue("@horas", tbHoras.Text);
                 sql.Parameters.AddWithValue("@serviço", tbServiços.Text);
@@ -304,6 +304,11 @@ namespace CABELENDÁRIO
         }
 
         private void lblBarbearia_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }

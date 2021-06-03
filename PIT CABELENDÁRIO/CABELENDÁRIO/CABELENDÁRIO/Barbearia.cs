@@ -45,6 +45,11 @@ namespace CABELENDÁRIO
             set => _nomedono = value;
 
         }
+        public Barbearia(string nomebarbearia)
+        {
+            nomebarbearia = NomeBarbearia;
+            
+        }
 
        
 
