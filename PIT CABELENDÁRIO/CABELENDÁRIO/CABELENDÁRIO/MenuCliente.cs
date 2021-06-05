@@ -325,6 +325,10 @@ namespace CABELENDÁRIO
             {
                 MessageBox.Show("Selecione uma barbearia primeiro!");
             }
+            else if(tbPesquisarDia.Text == "")
+            {
+                MessageBox.Show("Digite o horário que você deseja pesquisar primeiro!");
+            }
             else
             {
                 PesquisarDias();
@@ -338,7 +342,7 @@ namespace CABELENDÁRIO
             sql.Connection = conexao;
 
 
-            sql.CommandText = $"SELECT dia,horas,Barbearia FROM Horários WHERE dia = '{tbPesquisarDia.Text}' AND Barbearia = '{tbBarbearia.Text}'";
+            sql.CommandText = $"SELECT dia,horas,Barbearia FROM Horários WHERE dia LIKE '%{tbPesquisarDia.Text}%' AND Barbearia = '{tbBarbearia.Text}'";
             try
             {
                 conexao.Open();
