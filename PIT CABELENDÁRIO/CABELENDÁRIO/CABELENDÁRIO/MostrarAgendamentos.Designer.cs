@@ -42,8 +42,10 @@ namespace CABELENDÁRIO
             this.lbVoltar = new System.Windows.Forms.Label();
             this.tbBarbearia = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblNomeUser = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGVHorariosAgendados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl1
@@ -51,7 +53,7 @@ namespace CABELENDÁRIO
             this.lbl1.AutoSize = true;
             this.lbl1.Font = new System.Drawing.Font("Bahnschrift Condensed", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lbl1.Location = new System.Drawing.Point(127, 9);
+            this.lbl1.Location = new System.Drawing.Point(172, 83);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(331, 45);
             this.lbl1.TabIndex = 0;
@@ -60,9 +62,9 @@ namespace CABELENDÁRIO
             // DGVHorariosAgendados
             // 
             this.DGVHorariosAgendados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVHorariosAgendados.Location = new System.Drawing.Point(118, 57);
+            this.DGVHorariosAgendados.Location = new System.Drawing.Point(136, 131);
             this.DGVHorariosAgendados.Name = "DGVHorariosAgendados";
-            this.DGVHorariosAgendados.Size = new System.Drawing.Size(351, 221);
+            this.DGVHorariosAgendados.Size = new System.Drawing.Size(410, 216);
             this.DGVHorariosAgendados.TabIndex = 1;
             this.DGVHorariosAgendados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -72,7 +74,7 @@ namespace CABELENDÁRIO
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(304, 379);
+            this.button1.Location = new System.Drawing.Point(355, 431);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 42);
             this.button1.TabIndex = 12;
@@ -86,7 +88,7 @@ namespace CABELENDÁRIO
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(140, 379);
+            this.button2.Location = new System.Drawing.Point(211, 431);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(138, 42);
             this.button2.TabIndex = 14;
@@ -98,7 +100,7 @@ namespace CABELENDÁRIO
             // 
             this.lbDias.AutoSize = true;
             this.lbDias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDias.Location = new System.Drawing.Point(117, 295);
+            this.lbDias.Location = new System.Drawing.Point(162, 351);
             this.lbDias.Name = "lbDias";
             this.lbDias.Size = new System.Drawing.Size(37, 20);
             this.lbDias.TabIndex = 15;
@@ -108,7 +110,7 @@ namespace CABELENDÁRIO
             // 
             this.lbHoras.AutoSize = true;
             this.lbHoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHoras.Location = new System.Drawing.Point(116, 324);
+            this.lbHoras.Location = new System.Drawing.Point(162, 382);
             this.lbHoras.Name = "lbHoras";
             this.lbHoras.Size = new System.Drawing.Size(56, 20);
             this.lbHoras.TabIndex = 16;
@@ -119,7 +121,7 @@ namespace CABELENDÁRIO
             this.lbServiços.AutoSize = true;
             this.lbServiços.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbServiços.ForeColor = System.Drawing.Color.Black;
-            this.lbServiços.Location = new System.Drawing.Point(115, 353);
+            this.lbServiços.Location = new System.Drawing.Point(132, 405);
             this.lbServiços.Name = "lbServiços";
             this.lbServiços.Size = new System.Drawing.Size(73, 20);
             this.lbServiços.TabIndex = 17;
@@ -127,21 +129,21 @@ namespace CABELENDÁRIO
             // 
             // tbDias
             // 
-            this.tbDias.Location = new System.Drawing.Point(160, 295);
+            this.tbDias.Location = new System.Drawing.Point(205, 353);
             this.tbDias.Name = "tbDias";
             this.tbDias.Size = new System.Drawing.Size(100, 20);
             this.tbDias.TabIndex = 18;
             // 
             // tbHoras
             // 
-            this.tbHoras.Location = new System.Drawing.Point(178, 324);
+            this.tbHoras.Location = new System.Drawing.Point(224, 379);
             this.tbHoras.Name = "tbHoras";
             this.tbHoras.Size = new System.Drawing.Size(100, 20);
             this.tbHoras.TabIndex = 19;
             // 
             // tbServiços
             // 
-            this.tbServiços.Location = new System.Drawing.Point(194, 355);
+            this.tbServiços.Location = new System.Drawing.Point(211, 405);
             this.tbServiços.Name = "tbServiços";
             this.tbServiços.Size = new System.Drawing.Size(100, 20);
             this.tbServiços.TabIndex = 20;
@@ -153,7 +155,7 @@ namespace CABELENDÁRIO
             this.lbVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbVoltar.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lbVoltar.Location = new System.Drawing.Point(436, 396);
+            this.lbVoltar.Location = new System.Drawing.Point(487, 455);
             this.lbVoltar.Name = "lbVoltar";
             this.lbVoltar.Size = new System.Drawing.Size(52, 18);
             this.lbVoltar.TabIndex = 21;
@@ -162,7 +164,7 @@ namespace CABELENDÁRIO
             // 
             // tbBarbearia
             // 
-            this.tbBarbearia.Location = new System.Drawing.Point(388, 293);
+            this.tbBarbearia.Location = new System.Drawing.Point(422, 377);
             this.tbBarbearia.Name = "tbBarbearia";
             this.tbBarbearia.Size = new System.Drawing.Size(156, 20);
             this.tbBarbearia.TabIndex = 22;
@@ -171,28 +173,41 @@ namespace CABELENDÁRIO
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(300, 293);
+            this.label1.Location = new System.Drawing.Point(334, 377);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 20);
             this.label1.TabIndex = 23;
             this.label1.Text = "Barbearia:";
             // 
-            // label2
+            // lblNomeUser
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 134);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "label2";
+            this.lblNomeUser.AutoSize = true;
+            this.lblNomeUser.Font = new System.Drawing.Font("Bahnschrift Condensed", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeUser.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.lblNomeUser.Location = new System.Drawing.Point(274, 24);
+            this.lblNomeUser.Name = "lblNomeUser";
+            this.lblNomeUser.Size = new System.Drawing.Size(142, 45);
+            this.lblNomeUser.TabIndex = 24;
+            this.lblNomeUser.Text = "NomeUser";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CABELENDÁRIO.Properties.Resources.usuario;
+            this.pictureBox1.Location = new System.Drawing.Point(147, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(121, 87);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 43;
+            this.pictureBox1.TabStop = false;
             // 
             // MostrarAgendamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(580, 450);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(652, 509);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblNomeUser);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbBarbearia);
             this.Controls.Add(this.lbVoltar);
@@ -213,6 +228,7 @@ namespace CABELENDÁRIO
             this.Text = "MostrarAgendamentos";
             this.Load += new System.EventHandler(this.MostrarAgendamentos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVHorariosAgendados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,6 +249,7 @@ namespace CABELENDÁRIO
         private System.Windows.Forms.Label lbVoltar;
         private System.Windows.Forms.TextBox tbBarbearia;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblNomeUser;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -26,6 +26,7 @@ namespace CABELENDÁRIO
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            lblNomeUser.Text = TelaLogin.UserCliente;
             AtualizarBarbearias();
             tbBarbearia.Enabled = false;
             tbDia.Enabled = false;
@@ -311,6 +312,52 @@ namespace CABELENDÁRIO
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tbDia_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            if (tbBarbearia.Text == "")
+            {
+                MessageBox.Show("Selecione uma barbearia primeiro!");
+            }
+            else
+            {
+                PesquisarDias();
+            }
+        }
+        public void PesquisarDias()
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = @"Data Source=DESKTOP-V3GENC1;Initial Catalog=BancoPIT;Integrated Security=True";
+            SqlCommand sql = new SqlCommand();
+            sql.Connection = conexao;
+
+
+            sql.CommandText = $"SELECT dia,horas,Barbearia FROM Horários WHERE dia = '{tbPesquisarDia.Text}' AND Barbearia = '{tbBarbearia.Text}'";
+            try
+            {
+                conexao.Open();
+                int i = sql.ExecuteNonQuery();
+
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.ToString());
+            }
+            finally
+            {
+                SqlDataAdapter adaptador = new SqlDataAdapter(sql.CommandText, conexao);
+                DataTable tabela = new DataTable();
+                adaptador.Fill(tabela);
+                dgvHorário.DataSource = tabela;
+                dgvHorário.ClearSelection();
+                conexao.Close();
+            }
         }
     }
 }

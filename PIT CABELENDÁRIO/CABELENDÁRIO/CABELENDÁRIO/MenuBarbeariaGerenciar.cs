@@ -81,7 +81,7 @@ namespace CABELENDÁRIO
             SqlCommand sql = new SqlCommand();
             sql.Connection = conexao;
 
-            sql.CommandText = "Select dia,horas FROM Horários";
+            sql.CommandText = $"Select dia,horas FROM Horários WHERE Barbearia = '{TelaLogin.NomeBarbearia}'";
             try
             {
                 conexao.Open();
@@ -117,7 +117,7 @@ namespace CABELENDÁRIO
                 sql.CommandText = "INSERT INTO Horários(dia,horas,Barbearia) VALUES (@Dia,@Horas,@barbearia)";
                 sql.Parameters.AddWithValue("@Dia", tbDias.Text);
                 sql.Parameters.AddWithValue("@Horas", tbHoras.Text);
-                sql.Parameters.AddWithValue("@barbearia", "TesteBarber");
+                sql.Parameters.AddWithValue("@barbearia", TelaLogin.NomeBarbearia);
                
                 int i = sql.ExecuteNonQuery();
             }
@@ -164,7 +164,7 @@ namespace CABELENDÁRIO
                 sql.CommandText = "INSERT INTO Serviços(Serviço,Preço,Barbearia) VALUES (@serviço,@preço,@barbearia)";
                 sql.Parameters.AddWithValue("@serviço", tbServiços.Text);
                 sql.Parameters.AddWithValue("@preço", tbPreçoServiço.Text);
-                sql.Parameters.AddWithValue("@barbearia","TesteBarber");
+                sql.Parameters.AddWithValue("@barbearia", TelaLogin.NomeBarbearia);
                 int i = sql.ExecuteNonQuery();
             }
             catch(Exception exception)
@@ -187,7 +187,7 @@ namespace CABELENDÁRIO
             SqlCommand sql = new SqlCommand();
             sql.Connection = conexao;
 
-            sql.CommandText = "Select Serviço,Preço FROM Serviços";
+            sql.CommandText = $"Select Serviço,Preço FROM Serviços WHERE Barbearia = '{TelaLogin.NomeBarbearia}'";
             try
             {
                 conexao.Open();
@@ -216,7 +216,7 @@ namespace CABELENDÁRIO
 
         private void button3_Click(object sender, EventArgs e)
         {
-            EditarHorario();
+         
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -232,7 +232,7 @@ namespace CABELENDÁRIO
             try
             {
                 conexao.Open();
-                sql.CommandText = "DELETE FROM Horários WHERE dia = '" + tbDias.Text + " ' AND horas = '"+tbHoras.Text+"'";
+                sql.CommandText = "DELETE FROM Horários WHERE dia = '" + tbDias.Text + " ' AND horas = '"+tbHoras.Text+"' AND Barbearia = '"+TelaLogin.NomeBarbearia+"'";
                 sql.ExecuteNonQuery();
                 AtualizarHorários();
                
@@ -252,13 +252,13 @@ namespace CABELENDÁRIO
                 conexao.Close();
             }
         }
-        public void EditarHorario()
-        {
-
-        }
+        
 
         private void MenuBarbeariaGerenciar_Load(object sender, EventArgs e)
         {
+            lblNomeBarbearia.Text = TelaLogin.NomeBarbearia;
+            lblEndereçoBarbearia.Text = TelaLogin.EndereçoBarbearia;
+            
             AtualizarHorários();
             AtualizarServiços();
            
@@ -273,7 +273,7 @@ namespace CABELENDÁRIO
             try
             {
                 conexao.Open();
-                sql.CommandText = "DELETE FROM Serviços WHERE Serviço = '" + tbServiços.Text + " ' ";
+                sql.CommandText = $"DELETE FROM Serviços WHERE Serviço = '" + tbServiços.Text + "' AND Barbearia = '" + TelaLogin.NomeBarbearia + "' ";
                 sql.ExecuteNonQuery();
                 AtualizarServiços();
 
@@ -325,6 +325,12 @@ namespace CABELENDÁRIO
                 tbPreçoServiço.Text = row.Cells["Preço"].Value.ToString();
                     
             }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            new BarbeariaAgendamentos().Show();
+            this.Hide();
         }
     }
 }

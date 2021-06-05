@@ -30,7 +30,8 @@ namespace CABELENDÁRIO
         private void MostrarAgendamentos_Load(object sender, EventArgs e)
         {
             AtualizarHorariosAgendados();
-            label2.Text = TelaLogin.UserCliente;
+            lblNomeUser.Text = TelaLogin.UserCliente;
+            
             tbBarbearia.Enabled = false;
             tbDias.Enabled = false;
             tbHoras.Enabled = false;
@@ -66,11 +67,7 @@ namespace CABELENDÁRIO
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            new Agendamento().Show();
-            this.Hide();
-        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -109,7 +106,7 @@ namespace CABELENDÁRIO
             {
                 
                 MessageBox.Show($"Seu serviço {tbServiços.Text} no dia {tbDias.Text} às {tbHoras.Text} foi desmarcado com sucesso com sucesso");
-                AtualizarHorariosAgendados();
+                AtualizarHorariosAgendados();   
                 
                 
                 conexao.Close();
