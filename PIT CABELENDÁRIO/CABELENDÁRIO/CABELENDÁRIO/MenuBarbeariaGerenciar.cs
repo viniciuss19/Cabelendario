@@ -332,6 +332,12 @@ namespace CABELENDÁRIO
             new BarbeariaAgendamentos().Show();
             this.Hide();
         }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            new MudarSenhaBarbearia().Show();
+            this.Hide();
+        }
     }
 }
 

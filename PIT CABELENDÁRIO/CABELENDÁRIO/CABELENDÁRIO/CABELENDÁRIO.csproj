@@ -89,6 +89,18 @@
     <Compile Include="MenuBarbeariaGerenciar.Designer.cs">
       <DependentUpon>MenuBarbeariaGerenciar.cs</DependentUpon>
     </Compile>
+    <Compile Include="MudarSenhaBarbearia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MudarSenhaBarbearia.Designer.cs">
+      <DependentUpon>MudarSenhaBarbearia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MudarSenhaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MudarSenhaCliente.Designer.cs">
+      <DependentUpon>MudarSenhaCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelaLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +133,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MostrarAgendamentos.resx">
       <DependentUpon>MostrarAgendamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MudarSenhaBarbearia.resx">
+      <DependentUpon>MudarSenhaBarbearia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MudarSenhaCliente.resx">
+      <DependentUpon>MudarSenhaCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaLogin.resx">
       <DependentUpon>TelaLogin.cs</DependentUpon>
