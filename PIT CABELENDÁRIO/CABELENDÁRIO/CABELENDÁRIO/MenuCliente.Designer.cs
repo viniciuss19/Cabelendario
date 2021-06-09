@@ -59,6 +59,7 @@ namespace CABELENDÁRIO
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.tbPesquisarDia = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBarbearias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHorário)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServiço)).BeginInit();
@@ -343,7 +344,7 @@ namespace CABELENDÁRIO
             this.lblNomeUser.BackColor = System.Drawing.Color.White;
             this.lblNomeUser.Font = new System.Drawing.Font("Bahnschrift Condensed", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeUser.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblNomeUser.Location = new System.Drawing.Point(176, 63);
+            this.lblNomeUser.Location = new System.Drawing.Point(166, 37);
             this.lblNomeUser.Name = "lblNomeUser";
             this.lblNomeUser.Size = new System.Drawing.Size(140, 35);
             this.lblNomeUser.TabIndex = 43;
@@ -382,12 +383,27 @@ namespace CABELENDÁRIO
             this.tbPesquisarDia.Size = new System.Drawing.Size(91, 20);
             this.tbPesquisarDia.TabIndex = 46;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(166, 75);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(134, 33);
+            this.button3.TabIndex = 47;
+            this.button3.Text = "Mudar Senha";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // MenuCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(889, 542);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.tbPesquisarDia);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
@@ -463,5 +479,6 @@ namespace CABELENDÁRIO
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox tbPesquisarDia;
+        private System.Windows.Forms.Button button3;
     }
 }

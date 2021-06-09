@@ -51,6 +51,7 @@ namespace CABELENDÁRIO
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.label1.Location = new System.Drawing.Point(101, 156);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 36);
@@ -82,6 +83,7 @@ namespace CABELENDÁRIO
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bauhaus 93", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.label2.Location = new System.Drawing.Point(16, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(282, 42);
@@ -121,7 +123,7 @@ namespace CABELENDÁRIO
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.SpringGreen;
+            this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
@@ -139,7 +141,7 @@ namespace CABELENDÁRIO
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.SpringGreen;
+            this.label3.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.label3.Location = new System.Drawing.Point(20, 346);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 18);
@@ -174,7 +176,7 @@ namespace CABELENDÁRIO
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.SpringGreen;
+            this.label4.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.label4.Location = new System.Drawing.Point(193, 348);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 16);
@@ -184,7 +186,7 @@ namespace CABELENDÁRIO
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.SpringGreen;
+            this.button2.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;

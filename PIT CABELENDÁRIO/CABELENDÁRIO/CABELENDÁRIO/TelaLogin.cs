@@ -21,11 +21,17 @@ namespace CABELENDÁRIO
         {
            
             InitializeComponent();
-            
 
+
+           
         }
+        public static string UserCliente = "";
+        public static string UserBarbearia = "";
+        public static string NomeBarbearia = "";
+        public static string EndereçoBarbearia = "";
+        
 
-       
+        
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -66,23 +72,72 @@ namespace CABELENDÁRIO
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            LogarUser();
+          
            
-                if (txtUsername.Text == "usuario" && txtPassword.Text == "123")
-                {
-                    new Menu().Show();
-                    this.Hide();
-                }
-
-                else
-                {
-                    MessageBox.Show("O nome de usuário ou senha está incorreto,tente novamente.");
-                    txtUsername.Clear();
-                    txtPassword.Clear();
-                    txtUsername.Focus();
-                }
+              
             
                 
+        }
+        public void LogarUser()
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = @"Data Source=DESKTOP-V3GENC1;Initial Catalog=BancoPIT;Integrated Security=True";
+            SqlCommand sql = new SqlCommand();
+            sql.Connection = conexao;
+
+            sql.CommandText = $"SELECT * From Clientes WHERE UserCliente = '{txtUsername.Text}' AND SenhaCliente = '{txtPassword.Text}'";
+            SqlDataAdapter adaptador = new SqlDataAdapter(sql.CommandText, conexao);
+            DataTable tabela = new DataTable();
+
+            string querybarbearia = $"SELECT * FROM Barbearias WHERE UserDonoBarbearia = '{txtUsername.Text}' AND CPFDonoBarbearia = '{txtPassword.Text}'";
+            SqlDataAdapter adaptador2 = new SqlDataAdapter(querybarbearia, conexao);
+            DataTable tabela2 = new DataTable();
+
+            adaptador.Fill(tabela);
+            adaptador2.Fill(tabela2);
+
+            if(tabela.Rows.Count == 1)
+            {
+                UserCliente = txtUsername.Text;
+
+
+
+
+
+                new MenuCliente().Show();
+                this.Hide();
+                txtPassword.Clear();
+                txtUsername.Clear();
+            }
+           
+          else  if(tabela2.Rows.Count == 1)
+            
+            {
+                
+                UserBarbearia = txtUsername.Text;
+                SqlCommand sql2 = new SqlCommand($"SELECT NomeBarbearia FROM Barbearias WHERE UserDonoBarbearia = '{UserBarbearia}'");
+                SqlCommand sql3 = new SqlCommand($"SELECT EndereçoBarbearia FROM Barbearias WHERE UserDonoBarbearia = '{UserBarbearia}'");
+                sql2.Connection = conexao;
+                sql3.Connection = conexao;
+                conexao.Open();
+                EndereçoBarbearia = Convert.ToString(sql3.ExecuteScalar());
+                NomeBarbearia = Convert.ToString(sql2.ExecuteScalar());
+                conexao.Close();
+                
+
+
+               new MenuBarbeariaGerenciar().Show();
+                this.Hide();
+                txtPassword.Clear();
+                txtUsername.Clear();
+            }
+            else
+            {
+                MessageBox.Show("USUÁRIO INVÁLIDO!");
+            }
+
+
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -99,6 +154,31 @@ namespace CABELENDÁRIO
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        public void LogarBarbearia()
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = @"Data Source=DESKTOP-V3GENC1;Initial Catalog=BancoPIT;Integrated Security=True";
+            SqlCommand sql = new SqlCommand();
+            sql.Connection = conexao;
+
+            sql.CommandText = $"SELECT * From Barbearias WHERE UserDonoBarbearia = '{txtUsername.Text}' AND CPFDonoBarbearia = '{txtPassword.Text}'";
+            SqlDataAdapter adaptador = new SqlDataAdapter(sql.CommandText, conexao);
+            DataTable tabela = new DataTable();
+
+            adaptador.Fill(tabela);
+
+            if (tabela.Rows.Count == 1)
+            {
+                new MenuBarbeariaGerenciar().Show();
+                this.Hide();
+                txtPassword.Clear();
+                txtUsername.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Este login não foi encontrado!");
+            }
         }
     }
 }

@@ -363,5 +363,11 @@ namespace CABELENDÁRIO
                 conexao.Close();
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new MudarSenhaCliente().Show();
+            this.Hide();
+        }
     }
 }
